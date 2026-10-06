@@ -17,7 +17,7 @@ export default function Cta() {
           </p>
 
           <h2 className="mt-1.5 max-w-[1000px] font-serif text-[25px] font-[700] leading-[1.15] sm:mt-2 sm:text-[38px] md:text-[42px] lg:text-[46px]">
-            Ready to Transition to Sovereign Clean Power?
+            “Ready to Power Your Future with Solar Energy?
           </h2>
 
           <p className="mt-4 max-w-[700px] text-[12px] font-[400] leading-[1.55] text-white sm:mt-6 sm:text-[16px] lg:text-[18px]">
