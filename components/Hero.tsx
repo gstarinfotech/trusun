@@ -37,7 +37,7 @@ export default function Hero() {
                 Engineering next-gen solar
               </span>
 
-              <h1 className="mt-5 font-head text-[43px] font-normal leading-[1.05] sm:mt-6 sm:text-[54px] md:text-[62px] lg:text-[70px]">
+              <h1 className="mt-5 font-head text-[34px] font-normal leading-[1.05] sm:mt-6 sm:text-[54px] md:text-[62px] lg:text-[70px]">
                 <span className="block">Power Your Future</span>
                 <span className="block">
                   with <span className="text-[#FF6B18]">Smarter Solar</span>.

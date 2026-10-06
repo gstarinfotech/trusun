@@ -8,8 +8,9 @@ export default function AboutFounder() {
                 from-[#020617]
                 via-[#06243D]
                 to-[#072A45]
-                py-10
+                py-7
                 text-white
+                sm:py-9
                 lg:py-12
             "
         >
@@ -17,21 +18,23 @@ export default function AboutFounder() {
                 <div
                     className="
                         mx-auto grid w-full max-w-[1216px]
-                        items-center gap-8
+                        items-center gap-5
+                        sm:gap-8
                         lg:grid-cols-[1.05fr_0.95fr]
                         lg:gap-[50px]
                     "
                 >
-                    {/* LEFT CONTENT */}
                     <div>
                         <span
                             className="
                                 inline-block rounded-full
                                 bg-white
-                                px-4 py-[7px]
-                                text-[11px] font-extrabold
+                                px-3.5 py-[6px]
+                                text-[9px] font-extrabold
                                 uppercase tracking-[.06em]
                                 text-[#0b1f3a]
+                                sm:px-4 sm:py-[7px]
+                                sm:text-[11px]
                             "
                         >
                             About the Founder
@@ -39,9 +42,10 @@ export default function AboutFounder() {
 
                         <h2
                             className="
-                                mt-4
-                                text-[32px] font-bold leading-[1.08]
+                                mt-3
+                                text-[27px] font-bold leading-[1.08]
                                 text-white
+                                sm:mt-4
                                 sm:text-[36px]
                                 lg:text-[54px]
                             "
@@ -61,10 +65,13 @@ export default function AboutFounder() {
 
                         <p
                             className="
-                                mt-4 max-w-[540px]
-                                text-[14px] font-normal
-                                leading-[1.65]
+                                mt-3 max-w-[540px]
+                                text-[12px] font-normal
+                                leading-[1.55]
                                 text-white/75
+                                sm:mt-4
+                                sm:text-[14px]
+                                sm:leading-[1.65]
                                 lg:text-[18px]
                             "
                         >
@@ -83,41 +90,41 @@ export default function AboutFounder() {
                             performance over short-term promises.
                         </p>
 
-                        {/* FOUNDER INFO */}
                         <div
                             className="
-                                mt-5 flex items-center gap-3
+                                mt-4 flex items-center gap-3
                                 border-t border-white/15
-                                pt-4
+                                pt-3
+                                sm:mt-5 sm:pt-4
                             "
                         >
                             <div
                                 className="
-                                    grid h-10 w-10 shrink-0
+                                    grid h-9 w-9 shrink-0
                                     place-items-center rounded-full
                                     bg-[#FF6B18]/15
                                     text-[#FF6B18]
+                                    sm:h-10 sm:w-10
                                 "
                             >
                                 <Icon
                                     d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5zM9 12l2 2 4-4"
-                                    size={18}
+                                    size={17}
                                 />
                             </div>
 
                             <div className="leading-tight">
-                                <p className="text-[17px] font-bold text-white">
+                                <p className="text-[15px] font-bold text-white sm:text-[17px]">
                                     Arjun Mehta
                                 </p>
 
-                                <p className="mt-1 text-[14px] text-white/60">
+                                <p className="mt-0.5 text-[11px] text-white/60 sm:mt-1 sm:text-[14px]">
                                     Founder &amp; Chief Solar Engineer
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    {/* RIGHT IMAGE */}
                     <div
                         className="
                             relative ml-auto
@@ -127,7 +134,6 @@ export default function AboutFounder() {
                             lg:-translate-x-2
                         "
                     >
-                        {/* BLUE GLOW */}
                         <div
                             className="
                                 absolute inset-2
@@ -137,7 +143,6 @@ export default function AboutFounder() {
                             "
                         />
 
-                        {/* LEFT ORANGE BAR */}
                         <span
                             className="
                                 absolute left-0 top-5 bottom-12
@@ -147,7 +152,6 @@ export default function AboutFounder() {
                             "
                         />
 
-                        {/* BOTTOM ORANGE BAR */}
                         <span
                             className="
                                 absolute bottom-0
@@ -158,7 +162,6 @@ export default function AboutFounder() {
                             "
                         />
 
-                        {/* IMAGE */}
                         <div
                             className="
                                 relative z-10

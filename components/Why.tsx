@@ -20,50 +20,60 @@ const items = [
 
 export default function Why() {
   return (
-    <section id="why" className="py-8 sm:py-12 lg:py-20">
+    <section id="why" className="py-7 sm:py-10 lg:py-20">
       <Container>
         <div className="mx-auto w-full max-w-[1216px]">
 
           <div className="mx-auto max-w-2xl text-center">
-            <Eyebrow>The Engineering Distinction</Eyebrow>
+            <div className="text-[7px] sm:text-[11px]">
+              <Eyebrow>The Engineering Distinction</Eyebrow>
+            </div>
 
-            <h2 className="mt-2 font-serif text-[clamp(1.9rem,3.8vw,3.1rem)] font-semibold leading-tight text-ink">
+            <h2 className="mt-2 font-nav text-[27px] font-semibold leading-[1.15] text-ink sm:text-[34px] lg:text-[3.1rem]">
               Why People Trust Us
             </h2>
           </div>
 
-          <div className="mt-7 grid gap-5 md:mt-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+          <div className="mt-6 grid gap-4 sm:mt-8 sm:gap-5 md:grid-cols-2 lg:mt-10 lg:grid-cols-3 lg:gap-6">
             {items.map((it) => (
               <article
                 key={it.t}
                 className="
-                  rounded-3xl
+                  rounded-2xl
                   border border-line
                   bg-card
-                  p-6
+                  p-5
                   shadow-lg
                   shadow-slate-900/5
-                  sm:p-8
+                  sm:rounded-3xl
+                  sm:p-6
+                  lg:p-8
                 "
               >
                 <div
                   className="
-                    mb-5
-                    grid h-12 w-12
+                    mb-4
+                    grid
+                    h-10
+                    w-10
                     place-items-center
-                    rounded-2xl
+                    rounded-xl
                     bg-accent/15
                     text-[#FF6B18]
+                    sm:mb-5
+                    sm:h-12
+                    sm:w-12
+                    sm:rounded-2xl
                   "
                 >
-                  <Icon d={it.i} size={24} />
+                  <Icon d={it.i} size={21} />
                 </div>
 
-                <h3 className="font-serif text-xl font-semibold text-ink">
+                <h3 className="font-nav text-[17px] font-semibold leading-[1.3] text-ink sm:text-[19px] lg:text-xl">
                   {it.t}
                 </h3>
 
-                <p className="mt-2 text-[15px] leading-relaxed text-mute">
+                <p className="mt-1.5 text-[12px] leading-[1.6] text-mute sm:mt-2 sm:text-[14px] lg:text-[15px]">
                   {it.d}
                 </p>
               </article>

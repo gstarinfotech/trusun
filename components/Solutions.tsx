@@ -37,11 +37,9 @@ export default function Solutions() {
         <div className="mx-auto w-full max-w-[1216px]">
           <Eyebrow>Targeted Solutions</Eyebrow>
 
-          <h2 className="mt-2 font-serif text-[clamp(1.9rem,3.8vw,3.1rem)] font-semibold leading-tight text-ink">
-            Powering Every Space with{" "}
-            <span className="text-[#FF6B18]">
-              Smarter Solar
-            </span>
+          <h2 className="mt-2 font-nav text-[27px] font-semibold leading-[1.15] text-ink sm:text-[34px] lg:text-[42px]">
+            Powering Every Space With{" "}
+            <span className="text-[#FF6B18]">Smarter Solar</span>
           </h2>
 
           <p className="mt-4 max-w-[700px] text-[17px] leading-relaxed text-mute">
@@ -51,17 +49,18 @@ export default function Solutions() {
             years to come.
           </p>
 
-          <div className="mt-8 grid gap-6 md:mt-10 lg:grid-cols-3">
+          <div className="mt-6 grid gap-4 sm:mt-8 sm:gap-5 lg:mt-10 lg:grid-cols-3 lg:gap-6">
             {list.map((s) => (
               <article
                 key={s.t}
                 className="
-                  flex flex-col overflow-hidden
-                  rounded-3xl border border-line
-                  bg-card shadow-lg shadow-slate-900/10
-                "
+        flex flex-col overflow-hidden
+        rounded-2xl border border-line
+        bg-card shadow-lg shadow-slate-900/10
+        sm:rounded-3xl
+      "
               >
-                <div className="relative h-56 bg-slate-200 dark:bg-slate">
+                <div className="relative h-44 bg-slate-200 dark:bg-slate sm:h-52 lg:h-56">
                   <img
                     src={s.img}
                     alt={s.t}
@@ -70,36 +69,39 @@ export default function Solutions() {
 
                   <span
                     className="
-                      absolute left-4 top-4
-                      rounded-full bg-navy
-                      px-3.5 py-1
-                      text-[13px] font-semibold text-white
-                    "
+            absolute left-3 top-3
+            rounded-full bg-navy
+            px-3 py-1
+            text-[10px] font-semibold text-white
+            sm:left-4 sm:top-4
+            sm:px-3.5 sm:text-[13px]
+          "
                   >
                     {s.tag}
                   </span>
                 </div>
 
-                <div className="flex flex-1 flex-col px-7 pb-6 pt-6">
-                  <h3 className="font-serif text-[1.35rem] font-semibold text-ink">
+                <div className="flex flex-1 flex-col px-4 pb-4 pt-4 sm:px-6 sm:pb-5 sm:pt-5 lg:px-7 lg:pb-6 lg:pt-6">
+                  <h3 className="font-nav text-[17px] font-semibold leading-[1.25] text-ink sm:text-[20px] lg:text-[1.35rem]">
                     {s.t}
                   </h3>
 
-                  <p className="mt-2 flex-1 text-[15px] leading-relaxed text-mute">
+                  <p className="mt-1.5 flex-1 text-[12px] leading-[1.55] text-mute sm:mt-2 sm:text-[14px] lg:text-[15px]">
                     {s.d}
                   </p>
 
                   <a
                     href={s.href}
                     className="
-                      mt-5 flex items-center gap-2
-                      border-t border-line pt-4
-                      text-[14px] font-semibold text-ink
-                      hover:text-[#FF6B18]
-                    "
+            mt-4 flex items-center gap-2
+            border-t border-line pt-3
+            text-[12px] font-semibold text-ink
+            hover:text-[#FF6B18]
+            sm:mt-5 sm:pt-4 sm:text-[14px]
+          "
                   >
                     {s.cta}
-                    <Icon d={paths.arrow} size={15} />
+                    <Icon d={paths.arrow} size={14} />
                   </a>
                 </div>
               </article>

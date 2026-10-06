@@ -26,22 +26,22 @@ function SectionHeading({
 
             <h2
                 className={`
-                    mt-1.5
-                    max-w-[700px]
-                    ${center ? "mx-auto" : ""}
-                    font-nav
-                    text-[28px]
-                    font-[700]
-                    leading-[1.15]
-                    tracking-[-0.02em]
-                    sm:mt-2
-                    sm:text-[32px]
-                    lg:text-[36px]
-                    ${dark
+        mt-1.5
+        max-w-[700px]
+        ${center ? "mx-auto" : ""}
+        font-nav
+        text-[22px]
+        font-[700]
+        leading-[1.15]
+        tracking-[-0.02em]
+        sm:mt-2
+        sm:text-[32px]
+        lg:text-[36px]
+        ${dark
                         ? "text-white"
                         : "text-[#0B2342] dark:text-white"
                     }
-                `}
+    `}
             >
                 {title}
             </h2>
@@ -107,7 +107,7 @@ function Hero({ data }) {
                 />
             </div>
 
-            <Container className="relative z-10 px-5 py-10 sm:px-8 sm:py-14 lg:px-0 lg:py-[76px]">
+            <Container className="relative z-10 px-5 py-7 sm:px-8 sm:py-14 lg:px-0 lg:py-[76px]">
                 <div
                     className="
                         mx-auto
@@ -115,7 +115,7 @@ function Hero({ data }) {
                         w-full
                         max-w-[1250px]
                         items-center
-                        gap-8
+                        gap-7
                         sm:gap-10
                         lg:grid-cols-[1fr_1fr]
                         lg:gap-14
@@ -150,7 +150,7 @@ function Hero({ data }) {
 
                         <h1
                             className="
-                                mt-4
+                                mt-3
                                 max-w-[762.33px]
                                 font-nav
                                 text-[34px]
@@ -168,7 +168,7 @@ function Hero({ data }) {
 
                         <p
                             className="
-                                mt-4
+                                mt-3
                                 max-w-[563.38px]
                                 font-sans
                                 text-[13px]
@@ -183,7 +183,7 @@ function Hero({ data }) {
                             {h.description}
                         </p>
 
-                        <div className="mt-6 flex flex-row gap-2.5 sm:mt-7 sm:flex-wrap sm:gap-3">
+                        <div className="mt-5 flex flex-row gap-2.5 sm:mt-7 sm:flex-wrap sm:gap-3">
                             <a
                                 href="#contact"
                                 className="
@@ -247,13 +247,13 @@ function Hero({ data }) {
 
                         <div
                             className="
-                                mt-6
+                                mt-5
                                 grid
                                 max-w-[560px]
                                 grid-cols-3
                                 border-t
                                 border-white/15
-                                pt-4
+                                pt-3
                                 sm:mt-7
                                 sm:pt-5
                             "
@@ -438,7 +438,7 @@ function Advantages({ data }) {
                                     border
                                     border-[#D9E4F0]
                                     bg-white
-                                    p-5
+                                    p-4
                                     dark:border-white/10
                                     dark:bg-card
                                     sm:p-6
@@ -466,15 +466,16 @@ function Advantages({ data }) {
 
                                 <h2
                                     className="
-                                        mt-4
+                                        mt-3
                                         font-nav
-                                        text-[18px]
+                                        text-[17px]
                                         font-semibold
-                                        leading-[1.3]
+                                        leading-[1.25]
                                         text-[#121C26]
                                         dark:text-white
                                         sm:mt-5
                                         sm:text-[20px]
+                                        sm:leading-[1.3]
                                     "
                                 >
                                     {item.title}
@@ -482,13 +483,15 @@ function Advantages({ data }) {
 
                                 <p
                                     className="
-                                        mt-2
+                                        mt-1.5
                                         font-sans
-                                        text-[12px]
-                                        leading-[1.6]
+                                        text-[11px]
+                                        leading-[1.5]
                                         text-[#475569]
                                         dark:text-[#AAB7C8]
+                                        sm:mt-2
                                         sm:text-[13px]
+                                        sm:leading-[1.6]
                                     "
                                 >
                                     {item.description}
@@ -496,11 +499,11 @@ function Advantages({ data }) {
 
                                 <div className="mt-4 border-t border-[#E5EAF1] pt-3 dark:border-white/10 sm:mt-auto sm:pt-4">
                                     <div className="flex items-center justify-between gap-2">
-                                        <span className="font-sans text-[10px] text-[#414751] dark:text-[#94A3B8] sm:text-[12px]">
+                                        <span className="font-sans text-[9px] text-[#414751] dark:text-[#94A3B8] sm:text-[12px]">
                                             {item.label}
                                         </span>
 
-                                        <span className="font-nav text-[10px] font-[700] text-[#075A9F] dark:text-[#65B4FF] sm:text-[12px]">
+                                        <span className="font-nav text-[9px] font-[700] text-[#075A9F] dark:text-[#65B4FF] sm:text-[12px]">
                                             {item.value}
                                         </span>
                                     </div>
@@ -513,7 +516,6 @@ function Advantages({ data }) {
         </section>
     );
 }
-
 function Sectors({ data }) {
     const section = data.sectors;
 

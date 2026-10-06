@@ -30,8 +30,8 @@ const steps = [
 export default function HowItWorks() {
     return (
         <section className="relative overflow-hidden font-sans">
-            <div className="relative bg-[#FF6B18] px-5 py-5 text-center sm:py-[27px]">
-                <h2 className="text-[27px] font-extrabold leading-[1.2] text-white sm:text-[38px] lg:text-[45px]">
+            <div className="relative bg-[#FF6B18] px-5 py-4 text-center sm:py-[27px]">
+                <h2 className="text-[23px] font-extrabold leading-[1.2] text-white sm:text-[38px] lg:text-[45px]">
                     How our Solar Team Works
                 </h2>
 
@@ -44,9 +44,9 @@ export default function HowItWorks() {
                         h-0
                         w-0
                         -translate-x-1/2
-                        border-l-[22px]
-                        border-r-[22px]
-                        border-t-[18px]
+                        border-l-[20px]
+                        border-r-[20px]
+                        border-t-[16px]
                         border-l-transparent
                         border-r-transparent
                         border-t-[#FF6B18]
