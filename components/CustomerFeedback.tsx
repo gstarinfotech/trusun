@@ -180,59 +180,63 @@ export default function CustomerFeedback() {
                 {/* CTA */}
                 <div
                     className="
-                        mx-auto
-                        mt-9
-                        flex
-                        w-full
-                        max-w-[1216px]
-                        flex-col
-                        gap-6
-                        rounded-[20px]
-                        bg-navy
-                        px-7
-                        py-8
-                        text-white
-                        sm:px-10
-                        lg:flex-row
-                        lg:items-center
-                        lg:justify-between
-                    "
+        mx-auto
+        mt-9
+        flex
+        w-full
+        max-w-[1216px]
+        flex-col
+        gap-6
+        rounded-[20px]
+        bg-navy
+        px-5
+        py-7
+        text-white
+        sm:px-10
+        sm:py-8
+        lg:flex-row
+        lg:items-center
+        lg:justify-between
+    "
                 >
                     <div>
                         <p
                             className="
-                                text-[11px]
-                                font-bold
-                                uppercase
-                                tracking-[.1em]
-                                text-[#FF6B18]
-                            "
+                text-[10px]
+                font-bold
+                uppercase
+                tracking-[.1em]
+                text-[#FF6B18]
+                sm:text-[11px]
+            "
                         >
                             Accelerate your energy independence
                         </p>
 
                         <h3
                             className="
-                                mt-2
-                                text-[24px]
-                                font-[700]
-                                leading-tight
-                                text-white
-                                lg:text-[36px]
-                            "
+                mt-2
+                text-[22px]
+                font-[700]
+                leading-tight
+                text-white
+                sm:text-[24px]
+                lg:text-[36px]
+            "
                         >
                             Ready to Make the Switch to Solar?
                         </h3>
 
                         <p
                             className="
-                                mt-2
-                                max-w-[533.54px]
-                                text-[15px]
-                                font-[400]
-                                leading-relaxed
-                                text-[#D9E3F1]
-                            "
+                mt-2
+                max-w-[533.54px]
+                text-[13px]
+                font-[400]
+                leading-relaxed
+                text-[#D9E3F1]
+                sm:text-[15px]
+            "
                         >
                             Connect with our lead photovoltaic engineers
                             for a personalized 3D rooftop simulation,
@@ -241,20 +245,27 @@ export default function CustomerFeedback() {
                         </p>
                     </div>
 
-                    <div className="flex shrink-0 flex-wrap gap-3">
+                    <div className="flex shrink-0 flex-row gap-2 sm:gap-3">
                         <a
                             href="#contact"
                             className="
-                                rounded-xl
-                                bg-[#FF6B18]
-                                px-6
-                                py-3.5
-                                text-[14px]
-                                font-semibold
-                                text-white
-                                transition
-                                hover:brightness-110
-                            "
+                inline-flex
+                shrink-0
+                items-center
+                justify-center
+                rounded-xl
+                bg-[#FF6B18]
+                px-3.5
+                py-3
+                text-[11px]
+                font-semibold
+                text-white
+                transition
+                hover:brightness-110
+                sm:px-6
+                sm:py-3.5
+                sm:text-[14px]
+            "
                         >
                             Schedule Free Consultation
                         </a>
@@ -262,16 +273,23 @@ export default function CustomerFeedback() {
                         <a
                             href="#"
                             className="
-                                rounded-xl
-                                bg-white/10
-                                px-6
-                                py-3.5
-                                text-[14px]
-                                font-semibold
-                                text-white
-                                transition
-                                hover:bg-white/20
-                            "
+                inline-flex
+                shrink-0
+                items-center
+                justify-center
+                rounded-xl
+                bg-white/10
+                px-3.5
+                py-3
+                text-[11px]
+                font-semibold
+                text-white
+                transition
+                hover:bg-white/20
+                sm:px-6
+                sm:py-3.5
+                sm:text-[14px]
+            "
                         >
                             Download Solar Guide
                         </a>

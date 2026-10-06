@@ -28,7 +28,7 @@ export default function Solutions() {
   return (
     <section
       id="solutions"
-      className="bg-[#F8FAFC] py-16 dark:bg-[#09111f] lg:py-20"
+      className="bg-[#F8FAFC] py-8 dark:bg-[#09111f] sm:py-12 lg:py-20"
     >
       <Container>
         <div className="mx-auto w-full max-w-[1216px]">
@@ -49,7 +49,7 @@ export default function Solutions() {
             years to come.
           </p>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-6 md:mt-10 md:grid-cols-2 lg:grid-cols-3">
             {list.map((s) => (
               <article
                 key={s.t}

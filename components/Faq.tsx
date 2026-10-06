@@ -32,43 +32,41 @@ export default function Faq() {
   return (
     <section
       id="faq"
-      className="bg-[#F8FAFC] py-16 dark:bg-[#09111f] lg:py-20"
+      className="bg-[#F8FAFC] py-8 dark:bg-[#09111f] sm:py-10 lg:py-20"
     >
       <div className="mx-auto w-full max-w-[1216px] px-5 sm:px-8 lg:px-0">
 
         <div className="text-center">
           <Eyebrow>Clarity &amp; Confidence</Eyebrow>
 
-          <h2 className="mt-2 font-serif text-[clamp(1.9rem,3.8vw,3.1rem)] font-semibold leading-tight text-ink">
+          <h2 className="mt-1.5 font-serif text-[22px] font-semibold leading-tight text-ink sm:mt-2 sm:text-[clamp(1.9rem,3.8vw,3.1rem)]">
             Frequently Asked Questions
           </h2>
 
-          <p className="mx-auto mt-4 max-w-[640px] text-[17px] text-mute">
+          <p className="mx-auto mt-3 max-w-[640px] text-[14px] leading-relaxed text-mute sm:mt-4 sm:text-[17px]">
             Straight answers to common questions about rooftop durability,
             weather variations, maintenance, and utility credits.
           </p>
         </div>
 
-        <div className="mx-auto mt-10 max-w-[1000px] space-y-3">
+        <div className="mx-auto mt-6 max-w-[1000px] space-y-2.5 sm:mt-10 sm:space-y-3">
           {list.map((f, i) => (
             <div
               key={f.q}
-              className={`overflow-hidden rounded-2xl border ${open === i
-                  ? "border-accent"
-                  : "border-line"
+              className={`overflow-hidden rounded-xl border ${open === i ? "border-accent" : "border-line"
                 } bg-[#EDF4FF] dark:bg-card`}
             >
               <button
                 aria-expanded={open === i}
                 onClick={() => setOpen(open === i ? null : i)}
-                className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left text-[16px] font-semibold text-ink"
+                className="flex w-full items-center justify-between gap-3 px-4 py-4 text-left text-[14px] font-semibold leading-snug text-ink sm:gap-4 sm:px-6 sm:py-5 sm:text-[16px]"
               >
-                {f.q}
+                <span>{f.q}</span>
 
                 <Icon
                   d={paths.chevron}
-                  size={20}
-                  className={`shrink-0 transition ${open === i
+                  size={18}
+                  className={`shrink-0 transition sm:h-5 sm:w-5 ${open === i
                       ? "rotate-180 text-[#FF6B18]"
                       : "text-mute"
                     }`}
@@ -76,7 +74,7 @@ export default function Faq() {
               </button>
 
               {open === i && (
-                <p className="px-6 pb-5 text-[15px] leading-relaxed text-mute">
+                <p className="px-4 pb-4 text-[13px] leading-relaxed text-mute sm:px-6 sm:pb-5 sm:text-[15px]">
                   {f.a}
                 </p>
               )}

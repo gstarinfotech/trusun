@@ -18,7 +18,6 @@ const team = [
     },
 ];
 
-/* REAL SOCIAL ICONS */
 function FacebookIcon() {
     return (
         <svg
@@ -57,30 +56,27 @@ function LinkedinIcon() {
 
 export default function OurTeam() {
     return (
-        <section className="bg-[#F8FAFC] py-16 dark:bg-[#09111f] lg:py-[72px]">
+        <section className="bg-[#F8FAFC] py-8 dark:bg-[#09111f] sm:py-10 lg:py-[72px]">
             <Container>
-                {/* HEADING */}
                 <div className="mx-auto max-w-[536.6px] text-center">
-                    <h2 className="font-serif text-[36px] font-bold leading-[1.2] text-[#17202A] dark:text-white">
+                    <h2 className="font-serif text-[28px] font-bold leading-[1.2] text-[#17202A] dark:text-white sm:text-[32px] lg:text-[36px]">
                         Our Team
                     </h2>
 
-                    <p className="mx-auto mt-3 max-w-[536.6px] text-[15px] font-[400] leading-[24px] text-[#414751] dark:text-slate-300">
+                    <p className="mx-auto mt-2.5 max-w-[536.6px] text-[13px] font-[400] leading-[1.6] text-[#414751] dark:text-slate-300 sm:mt-3 sm:text-[15px] sm:leading-[24px]">
                         Certified solar engineers, system architects, and field
                         installation specialists dedicated to multi-decade
                         performance.
                     </p>
                 </div>
 
-                {/* TEAM GRID */}
-                <div className="mx-auto mt-[38px] flex max-w-[1200px] flex-col items-center justify-center gap-[40px] lg:flex-row lg:items-start lg:gap-[24px]">
+                <div className="mx-auto mt-6 flex max-w-[1200px] flex-col items-center justify-center gap-7 sm:mt-8 sm:gap-9 lg:mt-[38px] lg:flex-row lg:items-start lg:gap-[24px]">
                     {team.map((m) => (
                         <div
                             key={m.n}
-                            className="relative w-full max-w-[373.32px] pt-0"
+                            className="relative w-full max-w-[340px] pt-0 sm:max-w-[373.32px]"
                         >
-                            {/* IMAGE */}
-                            <div className="h-[373.32px] w-full overflow-hidden rounded-[12px] bg-slate-200 dark:bg-slate-800">
+                            <div className="h-[300px] w-full overflow-hidden rounded-[12px] bg-slate-200 dark:bg-slate-800 sm:h-[350px] lg:h-[373.32px]">
                                 <img
                                     src={m.img}
                                     alt={m.n}
@@ -88,64 +84,64 @@ export default function OurTeam() {
                                 />
                             </div>
 
-                            {/* INFO CARD */}
                             <div
                                 className="
-                                    relative
-                                    z-10
+                                    relative z-10
                                     mx-auto
-                                    -mt-[52px]
+                                    -mt-[42px]
                                     flex
-                                    h-[168px]
-                                    w-[328.52px]
+                                    h-[145px]
+                                    w-[calc(100%-28px)]
+                                    max-w-[328.52px]
                                     flex-col
                                     items-center
                                     rounded-[12px]
                                     bg-white
-                                    px-5
-                                    pt-[27px]
+                                    px-4
+                                    pt-[21px]
                                     text-center
                                     shadow-[0_8px_20px_rgba(15,23,42,0.10)]
                                     dark:bg-[#111b2e]
                                     dark:shadow-[0_8px_25px_rgba(0,0,0,0.35)]
+                                    sm:-mt-[48px]
+                                    sm:h-[160px]
+                                    sm:pt-[24px]
+                                    lg:-mt-[52px]
+                                    lg:h-[168px]
+                                    lg:w-[328.52px]
+                                    lg:pt-[27px]
                                 "
                             >
-                                {/* ORANGE TOP LINE */}
                                 <span
                                     className="
                                         absolute
                                         left-1/2
                                         top-0
                                         h-[4px]
-                                        w-[210px]
+                                        w-[170px]
                                         -translate-x-1/2
                                         rounded-b-full
                                         bg-[#FF6B35]
+                                        sm:w-[190px]
+                                        lg:w-[210px]
                                     "
                                 />
 
-                                {/* NAME */}
-                                <h3 className="font-serif mt-[4px] text-[20px] font-[600] leading-[20px] text-[#121C26] dark:text-white">
+                                <h3 className="font-serif mt-[3px] text-[18px] font-[600] leading-[20px] text-[#121C26] dark:text-white sm:text-[20px]">
                                     {m.n}
                                 </h3>
 
-                                {/* ROLE */}
-                                <p className="mt-[14px] text-[14px] font-semibold leading-[18px] text-[#414751] dark:text-slate-300">
+                                <p className="mt-2.5 text-[12px] font-semibold leading-[18px] text-[#414751] dark:text-slate-300 sm:mt-[12px] sm:text-[14px]">
                                     {m.r}
                                 </p>
 
-                                {/* SOCIAL ICONS */}
-                                <div className="mt-[18px] flex items-center justify-center gap-[12px]">
-                                    {/* FACEBOOK */}
+                                <div className="mt-3.5 flex items-center justify-center gap-2.5 sm:mt-[16px] sm:gap-[12px]">
                                     <a
                                         href="#"
                                         aria-label={`${m.n} Facebook`}
                                         className="
-                                            flex
-                                            h-[32px]
-                                            w-[32px]
-                                            items-center
-                                            justify-center
+                                            flex h-[29px] w-[29px]
+                                            items-center justify-center
                                             rounded-full
                                             bg-[#E8F1FB]
                                             text-[#496A93]
@@ -162,16 +158,12 @@ export default function OurTeam() {
                                         <FacebookIcon />
                                     </a>
 
-                                    {/* X */}
                                     <a
                                         href="#"
                                         aria-label={`${m.n} X`}
                                         className="
-                                            flex
-                                            h-[29px]
-                                            w-[29px]
-                                            items-center
-                                            justify-center
+                                            flex h-[27px] w-[27px]
+                                            items-center justify-center
                                             rounded-full
                                             bg-[#E8F1FB]
                                             text-[#496A93]
@@ -188,16 +180,12 @@ export default function OurTeam() {
                                         <XIcon />
                                     </a>
 
-                                    {/* LINKEDIN */}
                                     <a
                                         href="#"
                                         aria-label={`${m.n} LinkedIn`}
                                         className="
-                                            flex
-                                            h-[29px]
-                                            w-[29px]
-                                            items-center
-                                            justify-center
+                                            flex h-[27px] w-[27px]
+                                            items-center justify-center
                                             rounded-full
                                             bg-[#E8F1FB]
                                             text-[#496A93]

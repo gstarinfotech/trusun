@@ -44,60 +44,55 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-page shadow-[0_4px_14px_rgba(0,0,0,0.12)] dark:shadow-[0_4px_18px_rgba(0,0,0,0.55)]">
       <div
-        className={`${wrap} flex h-[76px] items-center gap-4 lg:h-[100px]`}
+        className={`${wrap} relative flex h-[76px] items-center gap-3 sm:gap-4 lg:h-[100px]`}
       >
-        {/* LOGO */}
         <Link
           href="/"
           onClick={closeMenus}
-          className="flex shrink-0 items-center gap-2.5"
+          className="flex min-w-0 shrink-0 items-center gap-2 sm:gap-2.5"
         >
           <img
             src="/logo.png"
             alt="Trusun Enterprises"
-            className="h-11 w-auto lg:h-[58px]"
+            className="h-9 w-auto sm:h-11 lg:h-[58px]"
           />
 
-          <span className="font-logo text-[1.1rem] font-bold uppercase leading-[.95] text-navy dark:text-white lg:text-[1.6rem]">
+          <span className="font-logo text-[0.9rem] font-bold uppercase leading-[.95] text-navy dark:text-white sm:text-[1.1rem] lg:text-[1.6rem]">
             Trusun
             <br />
             Enterprises
           </span>
         </Link>
 
-        {/* NAVIGATION */}
         <nav
           aria-label="Main"
           className={`${open ? "flex" : "hidden"
-            } absolute left-0 right-0 top-full flex-col gap-1 border-b border-line bg-page px-5 py-4 lg:static lg:ml-auto lg:flex lg:flex-row lg:items-center lg:gap-9 lg:border-0 lg:bg-transparent lg:p-0`}
+            } absolute left-0 right-0 top-full max-h-[calc(100vh-76px)] flex-col gap-1 overflow-y-auto border-b border-line bg-page px-4 py-4 sm:px-5 lg:static lg:ml-auto lg:max-h-none lg:overflow-visible lg:flex lg:flex-row lg:items-center lg:gap-6 lg:border-0 lg:bg-transparent lg:p-0 xl:gap-9`}
         >
-          {/* HOME */}
           <Link
             href="/"
             onClick={closeMenus}
-            className="inline-flex items-center gap-1 py-2.5 font-nav text-[18px] font-semibold text-ink transition hover:text-[#FF6B18] lg:py-0 lg:text-[18px]"
+            className="inline-flex items-center gap-1 rounded-lg px-2 py-2.5 font-nav text-[16px] font-semibold text-ink transition hover:text-[#FF6B18] sm:text-[17px] lg:px-0 lg:py-0 lg:text-[18px]"
           >
             Home
           </Link>
 
-          {/* ABOUT */}
           <Link
             href="/about"
             onClick={closeMenus}
-            className="inline-flex items-center gap-1 py-2.5 font-nav text-[18px] font-semibold text-ink transition hover:text-[#FF6B18] lg:py-0 lg:text-[18px]"
+            className="inline-flex items-center gap-1 rounded-lg px-2 py-2.5 font-nav text-[16px] font-semibold text-ink transition hover:text-[#FF6B18] sm:text-[17px] lg:px-0 lg:py-0 lg:text-[18px]"
           >
             About Us
           </Link>
 
-          {/* SOLUTIONS */}
           <div className="relative">
             <button
               type="button"
               onClick={() => setSolutionsOpen((prev) => !prev)}
               aria-expanded={solutionsOpen}
-              className="inline-flex w-full items-center gap-1 py-2.5 font-nav text-[18px] font-semibold text-ink transition hover:text-[#FF6B18] lg:py-0 lg:text-[18px]"
+              className="inline-flex w-full items-center justify-between gap-1 rounded-lg px-2 py-2.5 font-nav text-[16px] font-semibold text-ink transition hover:text-[#FF6B18] sm:text-[17px] lg:w-auto lg:justify-start lg:px-0 lg:py-0 lg:text-[18px]"
             >
-              Solutions
+              <span>Solutions</span>
 
               <Icon
                 d={paths.chevron}
@@ -107,7 +102,6 @@ export default function Navbar() {
               />
             </button>
 
-            {/* SOLUTIONS DROPDOWN */}
             {solutionsOpen && (
               <div
                 className="
@@ -121,7 +115,7 @@ export default function Navbar() {
 
                   lg:absolute
                   lg:left-1/2
-                  lg:top-[calc(100%+12px)]
+                  lg:top-[calc(100%+18px)]
                   lg:w-[300px]
                   lg:-translate-x-1/2
                   lg:rounded-xl
@@ -136,81 +130,79 @@ export default function Navbar() {
                     className="
                       mb-2
                       flex
+                      min-h-[48px]
                       items-center
-                      gap-4
+                      gap-3
                       rounded-lg
                       bg-[#e9ecef]
-                      px-4
+                      px-3
                       py-3
                       font-nav
-                      text-[18px]
+                      text-[16px]
                       font-semibold
                       text-[#062d49]
                       transition
                       last:mb-0
                       hover:bg-[#dfe4e8]
+                      sm:gap-4
+                      sm:px-4
+                      sm:text-[18px]
                       dark:bg-[#18344c]
                       dark:text-white
                       dark:hover:bg-[#21445f]
                     "
                   >
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center">
-                      <Icon d={item.icon} size={24} />
+                      <Icon d={item.icon} size={22} />
                     </span>
 
-                    <span>{item.label}</span>
+                    <span className="truncate">{item.label}</span>
                   </Link>
                 ))}
               </div>
             )}
           </div>
 
-          {/* PROJECTS */}
           <Link
             href="/projects"
             onClick={closeMenus}
-            className="inline-flex items-center gap-1 py-2.5 font-nav text-[18px] font-semibold text-ink transition hover:text-[#FF6B18] lg:py-0 lg:text-[18px]"
+            className="inline-flex items-center gap-1 rounded-lg px-2 py-2.5 font-nav text-[16px] font-semibold text-ink transition hover:text-[#FF6B18] sm:text-[17px] lg:px-0 lg:py-0 lg:text-[18px]"
           >
             Projects
           </Link>
 
-          {/* SOLAR GUIDE */}
           <Link
             href="/solar-guide"
             onClick={closeMenus}
-            className="inline-flex items-center gap-1 py-2.5 font-nav text-[18px] font-semibold text-ink transition hover:text-[#FF6B18] lg:py-0 lg:text-[18px]"
+            className="inline-flex items-center gap-1 rounded-lg px-2 py-2.5 font-nav text-[16px] font-semibold text-ink transition hover:text-[#FF6B18] sm:text-[17px] lg:px-0 lg:py-0 lg:text-[18px]"
           >
             Solar guide
           </Link>
 
-          {/* MOBILE CTA */}
           <a
             href="#contact"
             onClick={closeMenus}
-            className="mt-2 rounded-full bg-navy px-7 py-3.5 text-center font-nav text-[17px] font-semibold text-white lg:hidden"
+            className="mt-2 rounded-full bg-navy px-6 py-3 text-center font-nav text-[15px] font-semibold text-white lg:hidden"
           >
             Get Free Quote
           </a>
         </nav>
 
-        {/* RIGHT ACTIONS */}
-        <div className="flex shrink-0 items-center gap-4">
-          {/* DESKTOP CTA */}
+        <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-3 lg:gap-4">
           <a
             href="#contact"
-            className="hidden rounded-full bg-navy px-8 py-3.5 font-nav text-[17px] font-semibold text-white transition hover:brightness-125 lg:inline-block dark:bg-[#1d5c85]"
+            className="hidden rounded-full bg-navy px-6 py-3 font-nav text-[15px] font-semibold text-white transition hover:brightness-125 lg:inline-block xl:px-8 xl:py-3.5 xl:text-[17px] dark:bg-[#1d5c85]"
           >
             Get Free Quote
           </a>
 
-          {/* THEME TOGGLE */}
           <button
             type="button"
             aria-label={
               dark ? "Switch to light mode" : "Switch to dark mode"
             }
             onClick={() => setTheme(dark ? "light" : "dark")}
-            className="grid h-11 w-11 place-items-center rounded-full border border-line bg-alt text-ink transition-all duration-200 hover:scale-105 hover:border-accent hover:text-[#FF6B18]"
+            className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-line bg-alt text-ink transition-all duration-200 hover:scale-105 hover:border-accent hover:text-[#FF6B18] sm:h-11 sm:w-11"
           >
             {dark ? (
               <Icon
@@ -225,13 +217,12 @@ export default function Navbar() {
             )}
           </button>
 
-          {/* MOBILE MENU */}
           <button
             type="button"
             aria-label="Menu"
             aria-expanded={open}
             onClick={() => setOpen((prev) => !prev)}
-            className="grid h-11 w-11 place-items-center rounded-xl border border-line lg:hidden"
+            className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-line text-ink sm:h-11 sm:w-11 lg:hidden"
           >
             <Icon
               d={

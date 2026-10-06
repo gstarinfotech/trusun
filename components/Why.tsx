@@ -20,11 +20,10 @@ const items = [
 
 export default function Why() {
   return (
-    <section id="why" className="py-16 lg:py-20">
+    <section id="why" className="py-8 sm:py-12 lg:py-20">
       <Container>
         <div className="mx-auto w-full max-w-[1216px]">
 
-          {/* HEADING */}
           <div className="mx-auto max-w-2xl text-center">
             <Eyebrow>The Engineering Distinction</Eyebrow>
 
@@ -33,8 +32,7 @@ export default function Why() {
             </h2>
           </div>
 
-          {/* CARDS */}
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-7 grid gap-5 md:mt-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
             {items.map((it) => (
               <article
                 key={it.t}
@@ -42,9 +40,10 @@ export default function Why() {
                   rounded-3xl
                   border border-line
                   bg-card
-                  p-8
+                  p-6
                   shadow-lg
                   shadow-slate-900/5
+                  sm:p-8
                 "
               >
                 <div

@@ -38,141 +38,152 @@ const badges = [
 
 export default function Testimonials() {
   return (
-    <section className="py-12 lg:py-16">
+    <section className="py-7 sm:py-10 lg:py-16">
       <Container>
         <div className="mx-auto w-full max-w-[1216px]">
 
-          {/* HEADER */}
-          <div className="flex flex-wrap items-end justify-between gap-4 border-b border-line pb-5">
-            <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-accent">
+          <div className="flex flex-wrap items-end justify-between gap-3 border-b border-line pb-4 sm:gap-4 sm:pb-5">
+
+            <div className="w-full sm:w-auto">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-accent sm:gap-2 sm:px-3 sm:text-[11px]">
                 <i className="h-1.5 w-1.5 rounded-full bg-accent" />
                 Real Homeowner Impact
               </span>
 
-              <h2 className="mt-2.5 font-serif text-[34px] font-semibold leading-tight text-ink">
+              <h2 className="mt-2.5 max-w-[700px] font-serif text-[21px] font-semibold leading-[1.2] text-ink sm:mt-2.5 sm:text-[34px]">
                 Trusted by 15,000+ rooftops.{" "}
                 <span className="text-blue">90% referral rate.</span>
               </h2>
             </div>
 
-            <div className="flex items-center gap-3 rounded-2xl border border-line bg-card px-4 py-2.5 shadow-sm">
-              <div className="h-9 w-9 rounded-lg bg-alt" />
+            <div className="mt-0 flex w-fit items-center gap-2 rounded-xl border border-line bg-card px-2.5 py-1.5 shadow-sm sm:mt-0 sm:gap-3 sm:rounded-2xl sm:px-4 sm:py-2.5">
+              <div className="h-7 w-7 shrink-0 rounded-lg bg-alt sm:h-9 sm:w-9" />
 
               <div className="leading-tight">
-                <b className="block text-[15px] text-ink">4.8</b>
-                <small className="text-[12px] text-mute">
+                <b className="block text-[13px] text-ink sm:text-[15px]">
+                  4.8
+                </b>
+
+                <small className="whitespace-nowrap text-[9px] text-mute sm:text-[12px]">
                   Google Verified (15k+ Reviews)
                 </small>
               </div>
             </div>
+
           </div>
 
-          {/* TESTIMONIAL CARDS */}
-          <div className="mt-5 grid gap-5 lg:grid-cols-[1.25fr_1fr_1fr_1fr]">
+          <div className="mt-4 grid gap-3 sm:mt-5 sm:gap-5 lg:grid-cols-[1.25fr_1fr_1fr_1fr]">
 
-            {/* FEATURED VIDEO CARD */}
-            <article className="relative flex min-h-[390px] flex-col justify-end overflow-hidden rounded-3xl bg-[#0d2240] p-6 text-white lg:min-h-[420px]">
+            <article className="relative flex min-h-[310px] flex-col justify-end overflow-hidden rounded-2xl bg-[#0d2240] p-4 text-white sm:min-h-[390px] sm:rounded-3xl sm:p-6 lg:min-h-[420px]">
 
               <div className="absolute inset-0 bg-[url('/testimonials/video-bg.jpg')] bg-cover bg-center" />
 
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a1a30] via-[#0a1a30]/80 to-[#0a1a30]/30" />
 
-              <span className="absolute left-6 top-6 rounded-md bg-black/50 px-3 py-1 text-[12px] font-medium backdrop-blur">
-                Verified Video Case
+              <span className="absolute left-4 top-4 rounded-md bg-black/50 px-2.5 py-1 text-[9px] font-medium backdrop-blur sm:left-6 sm:top-6 sm:px-3 sm:text-[12px]">
+                Verified
               </span>
 
-              <span className="absolute right-6 top-6 h-11 w-11 rounded-full bg-accent" />
+              <span className="absolute right-4 top-4 h-8 w-8 rounded-full bg-accent sm:right-6 sm:top-6 sm:h-11 sm:w-11" />
 
               <div className="relative">
-                <span className="inline-block rounded bg-[#0f5a3c] px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-[#4ee2a0]">
+
+                <span className="inline-block rounded bg-[#0f5a3c] px-2 py-1 text-[9px] font-bold uppercase tracking-wide text-[#4ee2a0] sm:px-2.5 sm:text-[11px]">
                   92% Monthly Bill Drop
                 </span>
 
-                <p className="mt-1.5 text-[13px] text-white/85">
+                <p className="mt-1 text-[11px] text-white/85 sm:mt-1.5 sm:text-[13px]">
                   Electricity Expenses
                 </p>
 
-                <p className="mt-1.5 flex items-baseline gap-3">
-                  <s className="text-xl text-white/60">₹4,000</s>
+                <p className="mt-1 flex items-baseline gap-2 sm:mt-1.5 sm:gap-3">
+                  <s className="text-base text-white/60 sm:text-xl">₹4,000</s>
 
-                  <b className="text-[2.35rem] font-extrabold leading-none">
+                  <b className="text-[1.8rem] font-extrabold leading-none sm:text-[2.35rem]">
                     ₹300
                   </b>
 
-                  <span className="text-sm text-white/70">/mo</span>
+                  <span className="text-[11px] text-white/70 sm:text-sm">
+                    /mo
+                  </span>
                 </p>
 
-                <blockquote className="mt-3 border-l-[3px] border-accent pl-3 text-[14px] leading-relaxed text-white/90">
+                <blockquote className="mt-2 border-l-[3px] border-accent pl-2.5 text-[11px] leading-relaxed text-white/90 sm:mt-3 sm:pl-3 sm:text-[14px]">
                   "The team handled the DISCOM net-metering approvals seamlessly.
                   Generating surplus energy every single day."
                 </blockquote>
 
-                <div className="mt-5 flex items-end justify-between border-t border-white/15 pt-3">
-                  <div className="leading-tight">
-                    <b className="block text-[14px]">
+                <div className="mt-3 flex items-end justify-between gap-2 border-t border-white/15 pt-3 sm:mt-5 sm:gap-3">
+
+                  <div className="min-w-0 leading-tight">
+                    <b className="block text-[12px] sm:text-[14px]">
                       Mahendra Thakre
                     </b>
 
-                    <small className="text-[12px] text-white/70">
+                    <small className="text-[9px] text-white/70 sm:text-[12px]">
                       Residential Villa • 5kW On-Grid System
                     </small>
                   </div>
 
                   <a
                     href="#"
-                    className="inline-flex items-center gap-1 text-[12px] font-medium text-accent"
+                    className="inline-flex shrink-0 items-center gap-1 text-[9px] font-medium text-accent sm:text-[12px]"
                   >
                     Watch story (1:14)
-                    <Icon d="M9 6l6 6-6 6" size={14} />
+                    <Icon d="M9 6l6 6-6 6" size={13} />
                   </a>
+
                 </div>
               </div>
             </article>
 
-            {/* REVIEW CARDS */}
             {reviews.map((r) => (
               <article
                 key={r.n}
-                className="flex flex-col overflow-hidden rounded-3xl border border-line bg-card"
+                className="flex flex-col overflow-hidden rounded-2xl border border-line bg-card sm:rounded-3xl"
               >
-                <div className="p-5">
+                <div className="p-3.5 sm:p-5">
+
                   <span
-                    className={`inline-block rounded-md border px-2.5 py-1 text-[12px] font-semibold ${r.cls}`}
+                    className={`inline-block rounded-md border px-2 py-1 text-[9px] font-semibold sm:px-2.5 sm:text-[12px] ${r.cls}`}
                   >
                     {r.chip}
                   </span>
 
-                  <p className="mt-2.5 text-[14px] leading-relaxed text-mute">
+                  <p className="mt-1.5 text-[11px] leading-[1.55] text-mute sm:mt-2.5 sm:text-[14px]">
                     "{r.q}"
                   </p>
+
                 </div>
 
                 <div className="mt-auto">
+
                   <div
-                    className="h-32 bg-slate-200 bg-cover bg-center dark:bg-slate-700"
+                    className="h-[90px] bg-slate-200 bg-cover bg-center dark:bg-slate-700 sm:h-32"
                     style={{
                       backgroundImage: `url(${r.thumb})`,
                     }}
                   />
 
-                  <div className="flex items-center gap-3 px-5 py-3.5">
+                  <div className="flex items-center gap-2 px-3.5 py-2.5 sm:gap-3 sm:px-5 sm:py-3.5">
+
                     <div
-                      className="h-9 w-9 shrink-0 rounded-full border border-line bg-slate-200 bg-cover bg-center dark:bg-slate-700"
+                      className="h-7 w-7 shrink-0 rounded-full border border-line bg-slate-200 bg-cover bg-center dark:bg-slate-700 sm:h-9 sm:w-9"
                       style={{
                         backgroundImage: `url(${r.av})`,
                       }}
                     />
 
-                    <div className="leading-tight">
-                      <b className="block text-[14px] text-ink">
+                    <div className="min-w-0 leading-tight">
+                      <b className="block truncate text-[12px] text-ink sm:text-[14px]">
                         {r.n}
                       </b>
 
-                      <small className="text-[12px] text-mute">
+                      <small className="text-[9px] text-mute sm:text-[12px]">
                         {r.m}
                       </small>
                     </div>
+
                   </div>
                 </div>
               </article>
@@ -180,9 +191,9 @@ export default function Testimonials() {
 
           </div>
 
-          {/* BOTTOM */}
-          <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-5">
-            <ul className="flex flex-wrap gap-x-8 gap-y-2 text-[13px] font-medium text-ink">
+          <div className="mt-4 flex flex-col gap-2.5 border-t border-line pt-3 sm:mt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-4 sm:pt-5">
+
+            <ul className="flex flex-wrap gap-x-3 gap-y-1 text-[9px] font-medium text-ink sm:gap-x-8 sm:gap-y-2 sm:text-[13px]">
               {badges.map((b) => (
                 <li key={b}>{b}</li>
               ))}
@@ -190,10 +201,11 @@ export default function Testimonials() {
 
             <a
               href="#calculator"
-              className="rounded-xl bg-navy px-6 py-3 text-[14px] font-semibold text-white transition hover:brightness-125 dark:bg-[#1d5c85]"
+              className="w-full rounded-xl bg-navy px-5 py-2.5 text-center text-[12px] font-semibold text-white transition hover:brightness-125 sm:w-auto sm:px-6 sm:py-3 sm:text-[14px] dark:bg-[#1d5c85]"
             >
               Calculate Solar ROI
             </a>
+
           </div>
 
         </div>

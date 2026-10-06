@@ -1,35 +1,35 @@
 export default function AboutHero() {
     return (
-        <section className="py-10 font-sans lg:py-12">
-            <div className="mx-auto w-full max-w-[1216px] px-5 lg:px-0">
+        <section className="py-7 font-sans sm:py-9 lg:py-12">
+            <div className="mx-auto w-full max-w-[1216px] px-5 sm:px-8 lg:px-0">
 
-                {/* EYEBROW */}
                 <p
                     className="
-                        text-[12px]
-                        font-bold
-                        uppercase
-                        tracking-[.08em]
-                        text-[#FF6B18]
-                    "
+            text-[10px]
+            font-bold
+            uppercase
+            tracking-[.08em]
+            text-[#FF6B18]
+            sm:text-[12px]
+          "
                 >
                     Turning sunlight into smarter energy.
                 </p>
 
-                {/* MAIN CONTENT */}
-                <div className="relative mt-3 min-h-[145px]">
+                <div className="relative mt-2 sm:mt-3 lg:min-h-[145px]">
 
-                    {/* HEADING */}
                     <h1
                         className="
-                            max-w-[850px]
-                            text-[38px]
-                            font-[700]
-                            leading-[1.04]
-                            tracking-[-0.8px]
-                            text-ink
-                            lg:text-[46px]
-                        "
+              max-w-[850px]
+              text-[28px]
+              font-[700]
+              leading-[1.08]
+              tracking-[-0.5px]
+              text-ink
+              sm:text-[34px]
+              lg:text-[46px]
+              lg:tracking-[-0.8px]
+            "
                     >
                         Our purpose and values:{" "}
                         <span className="text-[#FF6B18]">
@@ -38,22 +38,27 @@ export default function AboutHero() {
                         </span>
                     </h1>
 
-                    {/* RIGHT DESCRIPTION */}
                     <p
                         className="
-                            mt-6
-                            max-w-[600px]
-                            text-[17px]
-                            font-[500]
-                            uppercase
-                            leading-[1.9]
-                            tracking-[.039em]
-                            text-mute
-                            lg:absolute
-                            lg:left-[49.9%]
-                            lg:bottom-[-62px]
-                            lg:mt-0
-                        "
+              mt-4
+              max-w-[600px]
+              text-[13px]
+              font-[500]
+              uppercase
+              leading-[1.65]
+              tracking-[.03em]
+              text-mute
+              sm:mt-5
+              sm:text-[15px]
+              sm:leading-[1.8]
+              lg:absolute
+              lg:left-[49.9%]
+              lg:bottom-[-62px]
+              lg:mt-0
+              lg:text-[17px]
+              lg:leading-[1.9]
+              lg:tracking-[.039em]
+            "
                     >
                         We deliver smart solar solutions with expert
                         guidance and reliable support, helping homes and
@@ -61,25 +66,27 @@ export default function AboutHero() {
                     </p>
                 </div>
 
-                {/* IMAGE */}
                 <div
                     className="
-                        mt-26
-                        overflow-hidden
-                        bg-slate-200
-                        dark:bg-slate-700
-                    "
+            mt-7
+            overflow-hidden
+            bg-slate-200
+            dark:bg-slate-700
+            sm:mt-9
+            lg:mt-26
+          "
                 >
                     <img
                         src="/about-hero.png"
                         alt="Modern solar-powered home at sunset"
                         className="
-                            aspect-[1259/677]
-                            w-full
-                            object-cover
-                        "
+              aspect-[1259/677]
+              w-full
+              object-cover
+            "
                     />
                 </div>
+
             </div>
         </section>
     );
