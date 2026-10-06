@@ -7,6 +7,7 @@ const list = [
     d: "Switch to clean, reliable solar energy and reduce your monthly electricity bills. Our rooftop solutions are designed to fit your home’s energy needs while delivering long-term savings.",
     cta: "Explore Home Solar",
     img: "/solutions/homes.png",
+    href: "/solutions/homes",
   },
   {
     tag: "Housing Societies",
@@ -14,6 +15,7 @@ const list = [
     d: "Power common areas, lifts, lighting and other shared facilities with solar energy. Reduce society-wide electricity expenses and move towards a cleaner, more sustainable community.",
     cta: "Explore Society Solar",
     img: "/solutions/societies.jpg",
+    href: "/solutions/housing-societies",
   },
   {
     tag: "Commercial",
@@ -21,6 +23,7 @@ const list = [
     d: "Turn your commercial space into a smarter, more energy-efficient workplace. Our solar solutions help reduce operating costs while providing reliable clean energy for your business.",
     cta: "Explore Commercial Solar",
     img: "/solutions/commercial.jpg",
+    href: "/solutions/commercial",
   },
 ];
 
@@ -32,7 +35,6 @@ export default function Solutions() {
     >
       <Container>
         <div className="mx-auto w-full max-w-[1216px]">
-
           <Eyebrow>Targeted Solutions</Eyebrow>
 
           <h2 className="mt-2 font-serif text-[clamp(1.9rem,3.8vw,3.1rem)] font-semibold leading-tight text-ink">
@@ -49,7 +51,7 @@ export default function Solutions() {
             years to come.
           </p>
 
-          <div className="mt-8 grid gap-6 md:mt-10 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-6 md:mt-10 lg:grid-cols-3">
             {list.map((s) => (
               <article
                 key={s.t}
@@ -88,7 +90,7 @@ export default function Solutions() {
                   </p>
 
                   <a
-                    href="#contact"
+                    href={s.href}
                     className="
                       mt-5 flex items-center gap-2
                       border-t border-line pt-4
@@ -103,7 +105,6 @@ export default function Solutions() {
               </article>
             ))}
           </div>
-
         </div>
       </Container>
     </section>
