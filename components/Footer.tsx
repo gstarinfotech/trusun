@@ -13,7 +13,7 @@ import { Container, Icon, paths } from "./ui";
 const sol: { name: string; badge: string; href: string }[] = [
   { name: "Homes", badge: "Residential", href: "/solutions/homes" },
   { name: "Commercial Solar", badge: "C&I", href: "/solutions/commercial" },
-  { name: "Housing Societies", badge: "Multi-Family", href: "/solutions/societies" },
+  { name: "Housing Societies", badge: "Multi-Family", href: "/solutions/housing-societies" },
 ];
 
 const co: { name: string; href: string }[] = [
