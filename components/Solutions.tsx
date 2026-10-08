@@ -1,3 +1,6 @@
+"use client";
+
+import Link from "next/link";
 import { Container, Eyebrow, Icon, paths } from "./ui";
 
 const list = [
@@ -6,7 +9,7 @@ const list = [
     t: "Solar for Your Home",
     d: "Switch to clean, reliable solar energy and reduce your monthly electricity bills. Our rooftop solutions are designed to fit your home’s energy needs while delivering long-term savings.",
     cta: "Explore Home Solar",
-    img: "/solutions/homes.png",
+    img: "/trusun/solutions/homes.png",
     href: "/solutions/homes",
   },
   {
@@ -14,7 +17,7 @@ const list = [
     t: "Solar for Housing Societies",
     d: "Power common areas, lifts, lighting and other shared facilities with solar energy. Reduce society-wide electricity expenses and move towards a cleaner, more sustainable community.",
     cta: "Explore Society Solar",
-    img: "/solutions/societies.jpg",
+    img: "/trusun/solutions/societies.jpg",
     href: "/solutions/housing-societies",
   },
   {
@@ -22,7 +25,7 @@ const list = [
     t: "Solar for Your Business",
     d: "Turn your commercial space into a smarter, more energy-efficient workplace. Our solar solutions help reduce operating costs while providing reliable clean energy for your business.",
     cta: "Explore Commercial Solar",
-    img: "/solutions/commercial.jpg",
+    img: "/trusun/solutions/commercial.jpg",
     href: "/solutions/commercial",
   },
 ];
@@ -54,11 +57,11 @@ export default function Solutions() {
               <article
                 key={s.t}
                 className="
-        flex flex-col overflow-hidden
-        rounded-2xl border border-line
-        bg-card shadow-lg shadow-slate-900/10
-        sm:rounded-3xl
-      "
+                  flex flex-col overflow-hidden
+                  rounded-2xl border border-line
+                  bg-card shadow-lg shadow-slate-900/10
+                  sm:rounded-3xl
+                "
               >
                 <div className="relative h-44 bg-slate-200 dark:bg-slate sm:h-52 lg:h-56">
                   <img
@@ -69,13 +72,13 @@ export default function Solutions() {
 
                   <span
                     className="
-            absolute left-3 top-3
-            rounded-full bg-navy
-            px-3 py-1
-            text-[10px] font-semibold text-white
-            sm:left-4 sm:top-4
-            sm:px-3.5 sm:text-[13px]
-          "
+                      absolute left-3 top-3
+                      rounded-full bg-navy
+                      px-3 py-1
+                      text-[10px] font-semibold text-white
+                      sm:left-4 sm:top-4
+                      sm:px-3.5 sm:text-[13px]
+                    "
                   >
                     {s.tag}
                   </span>
@@ -90,19 +93,19 @@ export default function Solutions() {
                     {s.d}
                   </p>
 
-                  <a
+                  <Link
                     href={s.href}
                     className="
-            mt-4 flex items-center gap-2
-            border-t border-line pt-3
-            text-[12px] font-semibold text-ink
-            hover:text-[#FF6B18]
-            sm:mt-5 sm:pt-4 sm:text-[14px]
-          "
+                      mt-4 flex items-center gap-2
+                      border-t border-line pt-3
+                      text-[12px] font-semibold text-ink
+                      hover:text-[#FF6B18]
+                      sm:mt-5 sm:pt-4 sm:text-[14px]
+                    "
                   >
                     {s.cta}
                     <Icon d={paths.arrow} size={14} />
-                  </a>
+                  </Link>
                 </div>
               </article>
             ))}
