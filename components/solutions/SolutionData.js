@@ -269,9 +269,7 @@ export const solutionData = {
             description:
                 "Connect with our lead photovoltaic engineers for a personalized 3D rooftop simulation, tariff payback model, and zero-obligation site visit.",
 
-            primary: "Schedule Free Consultation",
-
-            secondary: "Download Solar Guide",
+            primary: "Schedule Free Consultation"
         },
     },
 

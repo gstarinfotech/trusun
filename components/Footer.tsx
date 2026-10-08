@@ -1,50 +1,71 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa6";
 import { Container, Icon, paths } from "./ui";
 
-const sol: [string, string?][] = [
-  ["Industrial Solar", "MW"],
-  ["Commercial Solar", "C&I"],
-  ["Turnkey EPC"],
-  ["Rooftop Solar"],
-  ["Solar Water Pumping"],
-  ["Grid Consultancy"],
+const sol: { name: string; badge: string; href: string }[] = [
+  { name: "Homes", badge: "Residential", href: "/solutions/homes" },
+  { name: "Commercial Solar", badge: "C&I", href: "/solutions/commercial" },
+  { name: "Housing Societies", badge: "Multi-Family", href: "/solutions/societies" },
 ];
 
-const co = [
-  "Home Overview",
-  "About Us",
-  "Why TruSun",
-  "Delivered Assets",
-  "Solar Engineering Guide",
-  "Govt Subsidies",
+const co: { name: string; href: string }[] = [
+  { name: "Home Overview", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Why trust us", href: "/#why" },
+  { name: "How it Works", href: "/about#how-it-works" },
+  { name: "Customer Reviews", href: "/about#feedbacks" },
 ];
 
-const legal = [
-  "Privacy Policy",
-  "Terms of Engineering",
-  "Grid Compliance & SLAs",
-  "Sitemap",
+const legal: { name: string; href: string }[] = [
+  { name: "Privacy Policy", href: "/privacy" },
+  { name: "Terms of Engineering", href: "/terms" },
 ];
 
 const social = [
-  "M12 21a9 9 0 100-18 9 9 0 000 18zM3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18",
-  "M4 4h16v16H4zM8 16v-4M12 16V8M16 16v-2",
-  "M4 4l16 8-16 8 3-8z",
-  "M4 14v-2a8 8 0 0116 0v2M4 14h3v5H4zM17 14h3v5h-3z",
+  { name: "Facebook", href: "https://facebook.com/trusun", Icon: FaFacebookF },
+  { name: "Instagram", href: "https://instagram.com/trusun", Icon: FaInstagram },
+  { name: "LinkedIn", href: "https://linkedin.com/company/trusun", Icon: FaLinkedinIn }
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+  const [hash, setHash] = useState("");
+  useEffect(() => {
+    const sync = () => setHash(window.location.hash);
+    sync();
+    window.addEventListener("hashchange", sync);
+    window.addEventListener("popstate", sync);
+    return () => {
+      window.removeEventListener("hashchange", sync);
+      window.removeEventListener("popstate", sync);
+    };
+  }, [pathname]);
+
+  const isActive = (href: string) => {
+    const [base, h] = href.split("#");
+    const clean = (s: string) => s.replace(/\/$/, "") || "/";
+    if (clean(base) !== clean(pathname)) return false;
+    return (h ? "#" + h : "") === hash;
+  };
+
   return (
     <footer className="bg-[#071a2f] text-white">
       <Container className="pt-10 sm:pt-14 lg:pt-20">
         <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.2fr_.8fr_.8fr_1.3fr]">
 
           <div>
-            <a href="#home" className="flex items-center gap-2.5 sm:gap-3">
+            <Link href="/" className="flex items-center gap-2.5 sm:gap-3">
               <img
                 src="/logo.png"
-                alt=""
+                alt="TruSun Enterprises"
                 className="h-9 w-auto rounded bg-white p-0.5 sm:h-10"
               />
 
@@ -53,7 +74,7 @@ export default function Footer() {
                 <span className="font-light text-white/80">Enterprises</span>{" "}
                 <i className="text-[#FF6B18]">•</i>
               </span>
-            </a>
+            </Link>
 
             <p className="mt-4 max-w-sm text-[13px] leading-relaxed text-white/60 sm:mt-5 sm:text-[14px]">
               Engineering institutional-grade solar generation infrastructure,
@@ -71,14 +92,17 @@ export default function Footer() {
             </p>
 
             <div className="mt-2.5 flex gap-2.5 sm:mt-3 sm:gap-3">
-              {social.map((d, i) => (
+              {social.map(({ name, href, Icon: Brand }) => (
                 <a
-                  key={i}
-                  href="#"
-                  aria-label="Social link"
-                  className="grid h-8 w-8 place-items-center rounded-full border border-white/15 bg-white/5 text-white/80 hover:text-[#FF6B18] sm:h-9 sm:w-9"
+                  key={name}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={name}
+                  title={name}
+                  className="grid h-8 w-8 place-items-center rounded-full border border-white/15 bg-white/5 text-white/80 transition hover:border-[#FF6B18] hover:text-[#FF6B18] sm:h-9 sm:w-9"
                 >
-                  <Icon d={d} size={14} />
+                  <Brand size={14} />
                 </a>
               ))}
             </div>
@@ -90,22 +114,30 @@ export default function Footer() {
             </h4>
 
             <ul className="mt-4 space-y-2.5 text-[13px] text-white/70 sm:mt-5 sm:space-y-3.5 sm:text-[15px]">
-              {sol.map(([n, b]) => (
-                <li
-                  key={n}
-                  className="flex items-center justify-between gap-3"
-                >
-                  <a href="#solutions" className="hover:text-[#FF6B18]">
-                    {n}
-                  </a>
+              {sol.map(({ name, badge, href }) => {
+                const active = pathname === href;
+                return (
+                  <li
+                    key={name}
+                    className="flex items-center justify-between gap-3"
+                  >
+                    <Link
+                      href={href}
+                      className={
+                        active
+                          ? "font-semibold text-[#FF6B18]"
+                          : "hover:text-[#FF6B18]"
+                      }
+                    >
+                      {name}
+                    </Link>
 
-                  {b && (
                     <span className="rounded-md bg-white/10 px-1.5 py-0.5 text-[9px] font-semibold sm:px-2 sm:text-[11px]">
-                      {b}
+                      {badge}
                     </span>
-                  )}
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
@@ -115,30 +147,34 @@ export default function Footer() {
             </h4>
 
             <ul className="mt-4 space-y-2.5 text-[13px] text-white/70 sm:mt-5 sm:space-y-3.5 sm:text-[15px]">
-              {co.map((n) => (
-                <li key={n}>
-                  <a
-                    href="#home"
-                    className={
-                      n === "About Us"
-                        ? "font-semibold text-[#FF6B18]"
-                        : "hover:text-[#FF6B18]"
-                    }
-                  >
-                    {n}
-                    {n === "About Us" && " •"}
-                  </a>
-                </li>
-              ))}
+              {co.map(({ name, href }) => {
+                const active = isActive(href);
+                return (
+                  <li key={name}>
+                    <Link
+                      href={href}
+                      onClick={() =>
+                        setHash(href.includes("#") ? "#" + href.split("#")[1] : "")
+                      }
+                      className={
+                        active
+                          ? "font-semibold text-[#FF6B18]"
+                          : "hover:text-[#FF6B18]"
+                      }
+                    >
+                      {name}
+                      {active && " •"}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
           <div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-6">
               <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] sm:text-[13px]">
-                <b className="uppercase tracking-[.1em]">
-                  Project Briefing
-                </b>
+                <b className="uppercase tracking-[.1em]">Project Briefing</b>
 
                 <span className="text-[10px] font-semibold text-[#FF6B18] sm:text-[12px]">
                   • Quarterly Tech
@@ -185,14 +221,12 @@ export default function Footer() {
                     Hotline 24/7
                   </small>
 
-                  <b className="text-[12px] sm:text-[14px]">
-                    1800-TRUSUN
-                  </b>
+                  <b className="text-[12px] sm:text-[14px]">1800-TRUSUN</b>
                 </span>
               </a>
 
               <a
-                href="mailto:pro@trusunenergy.com"
+                href="mailto:pro@trusun.com"
                 className="flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/5 p-3 sm:gap-3 sm:p-4"
               >
                 <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-sky-400/20 text-sky-300 sm:h-9 sm:w-9">
@@ -205,7 +239,7 @@ export default function Footer() {
                   </small>
 
                   <b className="break-all text-[11px] sm:text-[14px]">
-                    pro@trusunenergy.com
+                    pro@trusun.com
                   </b>
                 </span>
               </a>
@@ -227,18 +261,19 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 sm:gap-x-6">
-            {legal.map((l) => (
-              <a key={l} href="#" className="hover:text-white">
-                {l}
-              </a>
+            {legal.map(({ name, href }) => (
+              <Link key={name} href={href} className="hover:text-white">
+                {name}
+              </Link>
             ))}
 
-            <a
-              href="#home"
+            <button
+              type="button"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="border-l border-white/15 pl-4 hover:text-white sm:pl-6"
             >
               Back to Top ↑
-            </a>
+            </button>
           </div>
         </div>
 

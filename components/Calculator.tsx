@@ -4,18 +4,27 @@ import { useState } from "react";
 import { Container, Eyebrow, Icon, paths } from "./ui";
 
 const inr = (n: number) => "₹" + Math.round(n).toLocaleString("en-IN");
+const BILL_MIN = 100;
+const BILL_MAX = 400000;
+const ROOF_MIN = 300;
+const ROOF_MAX = 500000;
+
+const fromPos = (pos: number, min: number, max: number, step: number) => {
+  const raw = min * Math.pow(max / min, pos / 100);
+  const v = Math.round(raw / step) * step;
+  return Math.min(max, Math.max(min, v));
+};
 
 export default function Calculator() {
-  const [bill, setBill] = useState(450);
-  const [roof, setRoof] = useState(1200);
+  const [billPos, setBillPos] = useState(18);
+  const [roofPos, setRoofPos] = useState(19);
 
-  const kw =
-    Math.round(Math.min(bill / 65, roof / 100) * 10) / 10;
+  const bill = fromPos(billPos, BILL_MIN, BILL_MAX, 50);
+  const roof = fromPos(roofPos, ROOF_MIN, ROOF_MAX, 100);
+
+  const kw = Math.round(Math.min(bill / 65, roof / 100) * 10) / 10;
 
   const yearly = Math.round(kw * 722.5);
-
-  const pct = (v: number, a: number, b: number) =>
-    `${((v - a) / (b - a)) * 100}%`;
 
   return (
     <section
@@ -54,19 +63,19 @@ export default function Calculator() {
 
                 <input
                   type="range"
-                  min={100}
-                  max={4000}
-                  step={50}
-                  value={bill}
-                  onChange={(e) => setBill(+e.target.value)}
+                  min={0}
+                  max={100}
+                  step={0.5}
+                  value={billPos}
+                  onChange={(e) => setBillPos(+e.target.value)}
                   style={{
-                    ["--p" as string]: pct(bill, 100, 4000),
+                    ["--p" as string]: `${billPos}%`,
                   }}
                 />
 
                 <span className="mt-3 flex justify-between text-xs text-mute sm:text-sm">
                   <span>₹100</span>
-                  <span>₹4,000+</span>
+                  <span>₹4,00,000+</span>
                 </span>
               </label>
 
@@ -84,19 +93,19 @@ export default function Calculator() {
 
                 <input
                   type="range"
-                  min={300}
-                  max={10000}
-                  step={100}
-                  value={roof}
-                  onChange={(e) => setRoof(+e.target.value)}
+                  min={0}
+                  max={100}
+                  step={0.5}
+                  value={roofPos}
+                  onChange={(e) => setRoofPos(+e.target.value)}
                   style={{
-                    ["--p" as string]: pct(roof, 300, 10000),
+                    ["--p" as string]: `${roofPos}%`,
                   }}
                 />
 
                 <span className="mt-3 flex justify-between text-xs text-mute sm:text-sm">
                   <span>300 sq.ft</span>
-                  <span>10,000+ sq.ft</span>
+                  <span>5,00,000+ sq.ft</span>
                 </span>
               </label>
             </div>
@@ -123,7 +132,7 @@ export default function Calculator() {
               </p>
 
               <p className="mt-2 text-[clamp(2.4rem,8vw,3.3rem)] font-extrabold leading-none">
-                {kw} kW
+                {kw.toLocaleString("en-IN")} kW
               </p>
 
               <p className="mt-2 text-[13px] text-white/75 sm:text-[14px]">

@@ -23,7 +23,7 @@ const reviews = [
 
 export default function CustomerFeedback() {
     return (
-        <section className="bg-[#F8FAFC] py-7 font-sans dark:bg-[#09111f] sm:py-12 lg:py-14">
+        <section id="feedbacks" className="bg-[#F8FAFC] py-7 font-sans dark:bg-[#09111f] sm:py-12 lg:py-14">
             <Container className="px-5 lg:px-0">
                 <div className="mx-auto w-full max-w-[1216px] text-center">
 
@@ -282,33 +282,6 @@ export default function CustomerFeedback() {
               "
                         >
                             Schedule Free Consultation
-                        </a>
-
-                        <a
-                            href="#"
-                            className="
-                inline-flex
-                min-w-0
-                flex-1
-                items-center
-                justify-center
-                rounded-xl
-                bg-white/10
-                px-3
-                py-3
-                text-center
-                text-[10px]
-                font-semibold
-                text-white
-                transition
-                hover:bg-white/20
-                sm:flex-none
-                sm:px-6
-                sm:py-3.5
-                sm:text-[14px]
-              "
-                        >
-                            Download Solar Guide
                         </a>
                     </div>
                 </div>

@@ -29,7 +29,7 @@ const steps = [
 
 export default function HowItWorks() {
     return (
-        <section className="relative overflow-hidden font-sans">
+        <section id="how-it-works" className="relative overflow-hidden font-sans">
             <div className="relative bg-[#FF6B18] px-5 py-4 text-center sm:py-[27px]">
                 <h2 className="text-[23px] font-extrabold leading-[1.2] text-white sm:text-[38px] lg:text-[45px]">
                     How our Solar Team Works

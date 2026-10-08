@@ -516,6 +516,7 @@ function Advantages({ data }) {
         </section>
     );
 }
+
 function Sectors({ data }) {
     const section = data.sectors;
 
@@ -932,63 +933,36 @@ function CTA({ data }) {
                     </p>
                 </div>
 
-                <div className="grid w-full shrink-0 grid-cols-2 gap-2 sm:flex sm:w-auto sm:gap-3">
+                <div className="grid w-full shrink-0 grid-cols-1 gap-2 sm:flex sm:w-auto sm:gap-3">
                     <a
                         href="#"
                         className="
-                            inline-flex
-                            min-h-[42px]
-                            items-center
-                            justify-center
-                            rounded-lg
-                            bg-[#FF6B18]
-                            px-2
-                            py-2.5
-                            text-center
-                            font-nav
-                            text-[10px]
-                            font-bold
-                            leading-tight
-                            text-white
-                            transition
-                            hover:brightness-110
-                            sm:min-h-[48px]
-                            sm:px-5
-                            sm:py-3
-                            sm:text-[12px]
-                            lg:px-6
-                        "
+            inline-flex
+            min-h-[42px]
+            w-full
+            items-center
+            justify-center
+            rounded-lg
+            bg-[#FF6B18]
+            px-2
+            py-2.5
+            text-center
+            font-nav
+            text-[10px]
+            font-bold
+            leading-tight
+            text-white
+            transition
+            hover:brightness-110
+            sm:min-h-[48px]
+            sm:w-auto
+            sm:px-5
+            sm:py-3
+            sm:text-[12px]
+            lg:px-6
+        "
                     >
                         {cta.primary}
-                    </a>
-
-                    <a
-                        href="#"
-                        className="
-                            inline-flex
-                            min-h-[42px]
-                            items-center
-                            justify-center
-                            rounded-lg
-                            bg-white/10
-                            px-2
-                            py-2.5
-                            text-center
-                            font-nav
-                            text-[10px]
-                            font-semibold
-                            leading-tight
-                            text-white
-                            transition
-                            hover:bg-white/20
-                            sm:min-h-[48px]
-                            sm:px-5
-                            sm:py-3
-                            sm:text-[12px]
-                            lg:px-6
-                        "
-                    >
-                        {cta.secondary}
                     </a>
                 </div>
             </div>
