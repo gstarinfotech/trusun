@@ -23,9 +23,9 @@ export default function AboutHero() {
                     </p>
                 </div>
 
-                <div className="mt-2 overflow-hidden bg-slate-200 dark:bg-slate-700 sm:mt-9 lg:mt-[104px]">
+                <div className="mt-2 overflow-hidden rounded-3xl bg-slate-200 dark:bg-slate-700 sm:mt-9 lg:mt-[104px]">
                     <img
-                        src="/about-hero.png"
+                        src="/about-hero.jpeg"
                         alt="Modern solar-powered home at sunset"
                         className="aspect-[1259/677] w-full object-cover"
                     />

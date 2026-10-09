@@ -549,7 +549,7 @@ function Sectors({ data }) {
                                     dark:bg-card
                                 "
                             >
-                                <div className="relative h-[150px] overflow-hidden sm:h-[170px] lg:h-[185px]">
+                                <div className="relative h-[150px] overflow-hidden sm:h-[170px] lg:h-[220px]">
                                     <img
                                         src={item.image}
                                         alt={item.title}

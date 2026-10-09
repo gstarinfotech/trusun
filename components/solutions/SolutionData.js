@@ -8,8 +8,8 @@ export const solutionData = {
 
             primaryCta: "Request Commercial Prospectus",
             secondaryCta: "Review Portfolio",
-            bgImage: "/solutions/commercial-hero.jpeg",
-            image: "/solutions/commercials.png",
+            bgImage: "/solutions/commercial-back-new.png",
+            image: "/solutions/commercial-top-new.png",
             stats: [
                 {
                     label: "CAPEX PAYBACK",
@@ -118,7 +118,7 @@ export const solutionData = {
                     title: "Tech Parks & Corporate HQs",
                     description:
                         "Designed for daytime baseloads, central HVAC chillers, and data infrastructure, with dual-purpose solar carports integrating EV fleet charging.",
-                    image: "/solutions/tech-parks.jpg",
+                    image: "/solutions/tech-parks.jpeg",
                     feature: "Rooftop & Carport Canopy Arrays",
                 },
 
@@ -127,7 +127,7 @@ export const solutionData = {
                     title: "Logistics & Warehousing",
                     description:
                         "Expansive, unshaded metal roof structures converted to high-capacity energy generation, powering heavy 24/7 cold storage refrigeration units.",
-                    image: "/solutions/logistics.jpg",
+                    image: "/solutions/warehousing-new.jpeg",
                     feature: "Trapezoidal Standing-Seam Clamps",
                 },
 
@@ -136,7 +136,7 @@ export const solutionData = {
                     title: "Retail & Hospitality",
                     description:
                         "Offset extensive daytime lighting, escalators, and HVAC loads while visibly signaling environmental stewardship to thousands of daily visitors.",
-                    image: "/solutions/retail.jpg",
+                    image: "/solutions/retail.jpeg",
                     feature: "Non-Penetrating Ballasted Mounting",
                 },
             ],
@@ -286,8 +286,8 @@ export const solutionData = {
 
             secondaryCta: "Explore Home Systems",
 
-            bgImage: "/solutions/commercial-hero.jpeg",
-            image: "/solutions/homes.png",
+            bgImage: "/home-back.jpeg",
+            image: "/main.jpeg",
 
             stats: [
                 {
@@ -400,7 +400,7 @@ export const solutionData = {
                     description:
                         "Designed for daytime family loads, water heating, and kitchen appliances, with compact arrays fitted to standard terrace layouts.",
 
-                    image: "/solutions/homes.png",
+                    image: "/solutions/independent-house.png",
 
                     feature: "Compact Rooftop Array",
                 },
@@ -413,7 +413,7 @@ export const solutionData = {
                     description:
                         "Expansive, unshaded terrace and portico roofs converted to high-capacity energy generation for larger homes with heavier cooling loads.",
 
-                    image: "/solutions/homes.png",
+                    image: "/solutions/villa.jpeg",
 
                     feature: "High-Capacity Multi-String Design",
                 },
@@ -426,7 +426,7 @@ export const solutionData = {
                     description:
                         "Offset construction-stage electrical loads and future consumption while using rooftop-ready wiring to simplify later installation.",
 
-                    image: "/solutions/homes.png",
+                    image: "/solutions/new-build-homes.jpeg",
 
                     feature: "Solar-Ready Electrical Provisioning",
                 },
@@ -579,8 +579,8 @@ export const solutionData = {
 
             secondaryCta: "Explore Society Solar",
 
-            bgImage: "/solutions/commercial-hero.jpeg",
-            image: "/solutions/societies.jpg",
+            bgImage: "/solutions/housing-societies-back.jpeg",
+            image: "/solutions/solar-for-societies-new.jpeg",
             stats: [
                 {
                     label: "CAPEX PAYBACK",
@@ -692,7 +692,7 @@ export const solutionData = {
                     description:
                         "Designed for lift motors, corridor lighting, and water-pump baseloads, with centralized arrays fitted to large terrace rooftops.",
 
-                    image: "/solutions/societies.jpg",
+                    image: "/solutions/highrise.png",
 
                     feature: "Centralized Rooftop Array",
                 },
@@ -700,12 +700,12 @@ export const solutionData = {
                 {
                     tag: "Gated Communities",
 
-                    title: "Villa & Gated Societies",
+                    title: "Gated Societies",
 
                     description:
                         "Expansive, unshaded clubhouse and gatehouse roofs converted to high-capacity energy generation for shared security and amenity loads.",
 
-                    image: "/solutions/societies.jpg",
+                    image: "/solutions/gated-societies.webp",
 
                     feature: "Multi-Building String Design",
                 },
@@ -718,7 +718,7 @@ export const solutionData = {
                     description:
                         "Offset extensive gym, hall, and pool-pump loads while visibly signaling environmental stewardship to every resident.",
 
-                    image: "/solutions/societies.jpg",
+                    image: "/solutions/shared-amenities.jpeg",
 
                     feature: "Non-Penetrating Terrace Mounting",
                 },

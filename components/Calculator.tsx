@@ -4,10 +4,17 @@ import { useState } from "react";
 import { Container, Eyebrow, Icon, paths } from "./ui";
 
 const inr = (n: number) => "₹" + Math.round(n).toLocaleString("en-IN");
-const BILL_MIN = 100;
+
+const BILL_MIN = 450;
 const BILL_MAX = 400000;
 const ROOF_MIN = 300;
 const ROOF_MAX = 500000;
+
+// ---- Assumptions (apne state ke hisaab se yahan change karo) ----
+const TARIFF = 7; // ₹ per unit (average)
+const UNITS_PER_KW_MONTH = 120; // ~4 units/day per kW
+const UNITS_PER_KW_YEAR = 1450; // ~4 units/day x 365
+const SQFT_PER_KW = 100; // roof space needed per kW
 
 const fromPos = (pos: number, min: number, max: number, step: number) => {
   const raw = min * Math.pow(max / min, pos / 100);
@@ -16,15 +23,21 @@ const fromPos = (pos: number, min: number, max: number, step: number) => {
 };
 
 export default function Calculator() {
-  const [billPos, setBillPos] = useState(18);
-  const [roofPos, setRoofPos] = useState(19);
+  const [billPos, setBillPos] = useState(28); // default ≈ ₹3,000
+  const [roofPos, setRoofPos] = useState(19); // default ≈ 1,200 sq.ft
 
   const bill = fromPos(billPos, BILL_MIN, BILL_MAX, 50);
   const roof = fromPos(roofPos, ROOF_MIN, ROOF_MAX, 100);
 
-  const kw = Math.round(Math.min(bill / 65, roof / 100) * 10) / 10;
+  // Bill ke hisaab se kitne kW chahiye vs roof pe kitne kW lag sakte hain
+  const kwByBill = bill / TARIFF / UNITS_PER_KW_MONTH;
+  const kwByRoof = roof / SQFT_PER_KW;
+  const kw = Math.round(Math.min(kwByBill, kwByRoof) * 10) / 10;
 
-  const yearly = Math.round(kw * 722.5);
+  // Saving saal ke bill se zyada nahi ho sakti
+  const yearly = Math.round(
+    Math.min(kw * UNITS_PER_KW_YEAR * TARIFF, bill * 12)
+  );
 
   return (
     <section
@@ -33,7 +46,6 @@ export default function Calculator() {
     >
       <Container>
         <div className="mx-auto grid w-full max-w-[980px] overflow-hidden rounded-[1.5rem] border border-line bg-card shadow-xl shadow-slate-900/10 sm:rounded-[2rem] lg:grid-cols-[1.4fr_1fr]">
-
           {/* LEFT */}
           <div className="p-6 sm:p-9 lg:p-12">
             <Eyebrow>Financial Forecast Engine</Eyebrow>
@@ -48,7 +60,6 @@ export default function Calculator() {
             </p>
 
             <div className="mt-6 space-y-6 sm:mt-7 sm:space-y-7">
-
               {/* BILL */}
               <label className="block">
                 <span className="mb-3 flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
@@ -74,7 +85,7 @@ export default function Calculator() {
                 />
 
                 <span className="mt-3 flex justify-between text-xs text-mute sm:text-sm">
-                  <span>₹100</span>
+                  <span>₹450</span>
                   <span>₹4,00,000+</span>
                 </span>
               </label>
@@ -125,7 +136,6 @@ export default function Calculator() {
 
           {/* RIGHT */}
           <div className="relative flex flex-col justify-between bg-navy p-6 text-white sm:p-9 lg:p-11">
-
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[.1em] text-white/70 sm:text-[12px]">
                 Recommended Plant

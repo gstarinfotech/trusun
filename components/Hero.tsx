@@ -20,7 +20,7 @@ export default function Hero() {
       className="relative overflow-hidden bg-[#0a1a2e] text-white"
     >
       <img
-        src="/main.png"
+        src="/home-back.jpeg"
         alt=""
         aria-hidden
         className="absolute inset-0 h-full w-full object-cover"
@@ -101,7 +101,7 @@ export default function Hero() {
               "
             >
               <img
-                src="/hero.png"
+                src="/main.jpeg"
                 alt="Modern villa with solar panels"
                 className="aspect-[5/4] w-full object-cover"
               />

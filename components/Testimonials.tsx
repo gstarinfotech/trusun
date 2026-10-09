@@ -8,25 +8,52 @@ const reviews = [
     n: "Santosh Singh",
     m: "10kW On-Grid • Lucknow",
     thumb: "/testimonials/santosh.jpg",
-    av: "/testimonials/avatar-1.jpg",
+    av: "/testimonials/johndoe.jpg",
   },
   {
     chip: "70% Drop in Bills",
     cls: "bg-[#eaf2ff] text-[#1d5fb8] border-[#c9dcf7]",
     q: "Flawless from consultation to commissioning! The plant delivers 22-24 units/day with zero downtime. Very impressed with the engineering.",
-    n: "Dr. Sudhakar Shukla",
+    n: "Dr. Sushma Shukla",
     m: "4kW Rooftop • Bhopal",
     thumb: "/testimonials/sudhakar.jpg",
-    av: "/testimonials/avatar-2.jpg",
+    av: "/testimonials/lilly.jpg",
   },
   {
     chip: "Elevated Premium Rig",
     cls: "bg-[#fff4e0] text-[#b45f06] border-[#f6dcae]",
     q: "The installation was clean, damage-free, and elevated so my terrace space wasn't compromised. Truly superior execution.",
-    n: "Samir Patil",
+    n: "Sarah Patil",
     m: "6kW Elevated • Nagpur",
     thumb: "/testimonials/samir.jpg",
-    av: "/testimonials/avatar-3.jpg",
+    av: "/testimonials/sarah.jpg",
+  },
+  {
+    chip: "Zero Bill in 3 Months",
+    cls: "bg-[#e9f8ef] text-[#0f7a4a] border-[#bfe9d3]",
+    q: "Subsidy and net-metering paperwork was fully handled by the team. My bill has been zero since the third month.",
+    n: "Vani Verma",
+    m: "5kW On-Grid • Jaipur",
+    thumb: "/testimonials/rakesh.jpg",
+    av: "/testimonials/lilly.jpg",
+  },
+  {
+    chip: "Smooth Installation",
+    cls: "bg-[#eaf2ff] text-[#1d5fb8] border-[#c9dcf7]",
+    q: "Installation finished in two days. The crew was professional and the monitoring app makes tracking daily generation easy.",
+    n: "Johni Deshmukh",
+    m: "3kW Rooftop • Pune",
+    thumb: "/testimonials/johndoe.jpg",
+    av: "/testimonials/mike.jpg",
+  },
+  {
+    chip: "Factory Savings",
+    cls: "bg-[#fff4e0] text-[#b45f06] border-[#f6dcae]",
+    q: "Our factory's monthly power cost fell sharply. Good build quality and the after-sales support has been responsive.",
+    n: "Rashi Choudhary",
+    m: "25kW Commercial • Indore",
+    thumb: "/testimonials/vikram.jpg",
+    av: "/testimonials/robert.jpg",
   },
 ];
 
@@ -41,16 +68,14 @@ export default function Testimonials() {
     <section className="py-8 sm:py-10 lg:py-16">
       <Container>
         <div className="mx-auto w-full max-w-[1216px]">
-
           <div className="flex flex-wrap items-end justify-between gap-4 border-b border-line pb-5">
-
             <div className="w-full sm:w-auto">
               <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-accent sm:gap-2 sm:px-3 sm:text-[11px]">
                 <i className="h-1.5 w-1.5 rounded-full bg-accent" />
                 Real Homeowner Impact
               </span>
 
-              <h2 className="mt-3 max-w-[700px] font-serif text-[22px] font-semibold leading-[1.2] text-ink sm:mt-2.5 sm:text-[34px]">
+              <h2 className="mt-3 max-w-[780px] font-serif text-[22px] font-semibold leading-[1.2] text-ink sm:mt-2.5 sm:text-[34px]">
                 Trusted by 15,000+ rooftops.{" "}
                 <span className="text-blue">90% referral rate.</span>
               </h2>
@@ -68,14 +93,13 @@ export default function Testimonials() {
                 </small>
               </div>
             </div>
-
           </div>
 
-          <div className="mt-5 grid gap-4 sm:mt-5 sm:gap-5 lg:grid-cols-[1.25fr_1fr_1fr_1fr]">
-
-            <article className="relative flex min-h-[350px] flex-col justify-end overflow-hidden rounded-2xl bg-[#0d2240] p-4 text-white sm:min-h-[390px] sm:rounded-3xl sm:p-6 lg:min-h-[420px]">
-
-              <div className="absolute inset-0 bg-[url('/testimonials/video-bg.jpg')] bg-cover bg-center" />
+          {/* LEFT big card + RIGHT 3x2 grid (6 cards) */}
+          <div className="mt-5 grid gap-4 sm:mt-5 sm:gap-5 lg:grid-cols-[1.25fr_3fr]">
+            {/* LEFT CARD */}
+            <article className="relative flex min-h-[350px] flex-col justify-end overflow-hidden rounded-2xl bg-[#0d2240] p-4 text-white sm:min-h-[390px] sm:rounded-3xl sm:p-6 lg:min-h-[440px]">
+              <div className="absolute inset-0 bg-[url('/testimonials/trusted.jpeg')] bg-cover bg-center" />
 
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a1a30] via-[#0a1a30]/80 to-[#0a1a30]/30" />
 
@@ -129,53 +153,47 @@ export default function Testimonials() {
               </div>
             </article>
 
-            {reviews.map((r) => (
-              <article
-                key={r.n}
-                className="flex flex-col overflow-hidden rounded-2xl border border-line bg-card sm:rounded-3xl"
-              >
-                <div className="p-4 sm:p-5">
-                  <span
-                    className={`inline-block rounded-md border px-2 py-1 text-[10px] font-semibold sm:px-2.5 sm:text-[12px] ${r.cls}`}
-                  >
-                    {r.chip}
-                  </span>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:grid-rows-2">
+              {reviews.map((r) => (
+                <article
+                  key={r.n}
+                  className="flex min-h-[170px] flex-col overflow-hidden rounded-2xl border border-line bg-card sm:rounded-3xl lg:min-h-0"
+                >
+                  <div className="p-4 sm:p-4">
+                    <span
+                      className={`inline-block rounded-md border px-2 py-1 text-[10px] font-semibold sm:px-2.5 sm:text-[12px] ${r.cls}`}
+                    >
+                      {r.chip}
+                    </span>
 
-                  <p className="mt-2 text-[12px] leading-relaxed text-mute sm:mt-2.5 sm:text-[14px]">
-                    "{r.q}"
-                  </p>
-                </div>
+                    <p className="mt-2 line-clamp-4 text-[12px] leading-relaxed text-mute sm:text-[13px]">
+                      "{r.q}"
+                    </p>
+                  </div>
 
-                <div className="mt-auto">
-                  <div
-                    className="h-28 bg-slate-200 bg-cover bg-center dark:bg-slate-700 sm:h-32"
-                    style={{
-                      backgroundImage: `url(${r.thumb})`,
-                    }}
-                  />
+                  <div className="mt-auto border-t border-line">
+                    <div className="flex items-center gap-2.5 px-4 py-3 sm:gap-3">
+                      <div
+                        className="h-8 w-8 shrink-0 rounded-full border border-line bg-slate-200 bg-cover bg-center dark:bg-slate-700 sm:h-9 sm:w-9"
+                        style={{
+                          backgroundImage: `url(${r.av})`,
+                        }}
+                      />
 
-                  <div className="flex items-center gap-2.5 px-4 py-3 sm:gap-3 sm:px-5 sm:py-3.5">
-                    <div
-                      className="h-8 w-8 shrink-0 rounded-full border border-line bg-slate-200 bg-cover bg-center dark:bg-slate-700 sm:h-9 sm:w-9"
-                      style={{
-                        backgroundImage: `url(${r.av})`,
-                      }}
-                    />
+                      <div className="min-w-0 leading-tight">
+                        <b className="block truncate text-[13px] text-ink sm:text-[14px]">
+                          {r.n}
+                        </b>
 
-                    <div className="leading-tight">
-                      <b className="block text-[13px] text-ink sm:text-[14px]">
-                        {r.n}
-                      </b>
-
-                      <small className="text-[10px] text-mute sm:text-[12px]">
-                        {r.m}
-                      </small>
+                        <small className="block truncate text-[10px] text-mute sm:text-[12px]">
+                          {r.m}
+                        </small>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </article>
-            ))}
-
+                </article>
+              ))}
+            </div>
           </div>
 
           <div className="mt-5 flex flex-col gap-3 border-t border-line pt-4 sm:mt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-4 sm:pt-5">
@@ -192,7 +210,6 @@ export default function Testimonials() {
               Calculate Solar ROI
             </a>
           </div>
-
         </div>
       </Container>
     </section>

@@ -9,7 +9,7 @@ const list = [
     t: "Solar for Your Home",
     d: "Switch to clean, reliable solar energy and reduce your monthly electricity bills. Our rooftop solutions are designed to fit your home’s energy needs while delivering long-term savings.",
     cta: "Explore Home Solar",
-    img: "/trusun/solutions/homes.png",
+    img: "/solutions/solar-for-home-new.png",
     href: "/solutions/homes",
   },
   {
@@ -17,7 +17,7 @@ const list = [
     t: "Solar for Housing Societies",
     d: "Power common areas, lifts, lighting and other shared facilities with solar energy. Reduce society-wide electricity expenses and move towards a cleaner, more sustainable community.",
     cta: "Explore Society Solar",
-    img: "/trusun/solutions/societies.jpg",
+    img: "/solutions/solar-for-societies-new.jpeg",
     href: "/solutions/housing-societies",
   },
   {
@@ -25,7 +25,7 @@ const list = [
     t: "Solar for Your Business",
     d: "Turn your commercial space into a smarter, more energy-efficient workplace. Our solar solutions help reduce operating costs while providing reliable clean energy for your business.",
     cta: "Explore Commercial Solar",
-    img: "/trusun/solutions/commercial.jpg",
+    img: "/solutions/solar-for-business-new.jpeg",
     href: "/solutions/commercial",
   },
 ];
