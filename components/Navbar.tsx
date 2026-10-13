@@ -180,22 +180,22 @@ export default function Navbar() {
             Solar guide
           </Link>
 
-          <a
+          <Link
             href="/contact-us"
             onClick={closeMenus}
             className="mt-2 rounded-full bg-navy px-6 py-3 text-center font-nav text-[15px] font-semibold text-white lg:hidden"
           >
             Get Free Quote
-          </a>
+          </Link>
         </nav>
 
         <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-3 lg:gap-4">
-          <a
+          <Link
             href="/contact-us"
             className="hidden rounded-full bg-navy px-6 py-3 font-nav text-[15px] font-semibold text-white transition hover:brightness-125 lg:inline-block xl:px-8 xl:py-3.5 xl:text-[17px] dark:bg-[#1d5c85]"
           >
             Get Free Quote
-          </a>
+          </Link>
 
           <button
             type="button"
