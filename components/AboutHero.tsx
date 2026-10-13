@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 export default function AboutHero() {
     return (
         <section className="py-6 font-sans sm:py-9 lg:py-12">
@@ -25,7 +26,7 @@ export default function AboutHero() {
 
                 <div className="mt-2 overflow-hidden rounded-3xl bg-slate-200 dark:bg-slate-700 sm:mt-9 lg:mt-[104px]">
                     <img
-                        src="/about-hero.jpeg"
+                        src={asset("/about-hero.jpeg")}
                         alt="Modern solar-powered home at sunset"
                         className="aspect-[1259/677] w-full object-cover"
                     />

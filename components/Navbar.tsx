@@ -1,4 +1,5 @@
 "use client";
+import { asset } from "@/lib/asset";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -52,7 +53,7 @@ export default function Navbar() {
           className="flex min-w-0 shrink-0 items-center gap-2 sm:gap-2.5"
         >
           <img
-            src="/logo.png"
+            src={asset("/logo.png")}
             alt="Trusun Enterprises"
             className="h-9 w-auto sm:h-11 lg:h-[58px]"
           />

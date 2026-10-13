@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { Container, Icon } from "./ui";
 
 const reviews = [
@@ -7,8 +8,8 @@ const reviews = [
     q: "My solar journey with TruSun has been satisfying. Power bills dropped from ₹18,000 to zero! Generating 50-55 units consistently.",
     n: "Santosh Singh",
     m: "10kW On-Grid • Lucknow",
-    thumb: "/testimonials/santosh.jpg",
-    av: "/testimonials/johndoe.jpg",
+    thumb: asset("/testimonials/santosh.jpg"),
+    av: asset("/testimonials/johndoe.jpg"),
   },
   {
     chip: "70% Drop in Bills",
@@ -16,8 +17,8 @@ const reviews = [
     q: "Flawless from consultation to commissioning! The plant delivers 22-24 units/day with zero downtime. Very impressed with the engineering.",
     n: "Dr. Sushma Shukla",
     m: "4kW Rooftop • Bhopal",
-    thumb: "/testimonials/sudhakar.jpg",
-    av: "/testimonials/lilly.jpg",
+    thumb: asset("/testimonials/sudhakar.jpg"),
+    av: asset("/testimonials/lilly.jpg"),
   },
   {
     chip: "Elevated Premium Rig",
@@ -25,8 +26,8 @@ const reviews = [
     q: "The installation was clean, damage-free, and elevated so my terrace space wasn't compromised. Truly superior execution.",
     n: "Sarah Patil",
     m: "6kW Elevated • Nagpur",
-    thumb: "/testimonials/samir.jpg",
-    av: "/testimonials/sarah.jpg",
+    thumb: asset("/testimonials/samir.jpg"),
+    av: asset("/testimonials/sarah.jpg"),
   },
   {
     chip: "Zero Bill in 3 Months",
@@ -34,8 +35,8 @@ const reviews = [
     q: "Subsidy and net-metering paperwork was fully handled by the team. My bill has been zero since the third month.",
     n: "Vani Verma",
     m: "5kW On-Grid • Jaipur",
-    thumb: "/testimonials/rakesh.jpg",
-    av: "/testimonials/lilly.jpg",
+    thumb: asset("/testimonials/rakesh.jpg"),
+    av: asset("/testimonials/lilly.jpg"),
   },
   {
     chip: "Smooth Installation",
@@ -43,8 +44,8 @@ const reviews = [
     q: "Installation finished in two days. The crew was professional and the monitoring app makes tracking daily generation easy.",
     n: "Johni Deshmukh",
     m: "3kW Rooftop • Pune",
-    thumb: "/testimonials/johndoe.jpg",
-    av: "/testimonials/mike.jpg",
+    thumb: asset("/testimonials/johndoe.jpg"),
+    av: asset("/testimonials/mike.jpg"),
   },
   {
     chip: "Factory Savings",
@@ -52,8 +53,8 @@ const reviews = [
     q: "Our factory's monthly power cost fell sharply. Good build quality and the after-sales support has been responsive.",
     n: "Rashi Choudhary",
     m: "25kW Commercial • Indore",
-    thumb: "/testimonials/vikram.jpg",
-    av: "/testimonials/robert.jpg",
+    thumb: asset("/testimonials/vikram.jpg"),
+    av: asset("/testimonials/robert.jpg"),
   },
 ];
 

@@ -33,7 +33,7 @@ const clusters = [
     },
 ];
 
-function LineIcon({ d, size = 16, className = "" }) {
+function LineIcon({ d, size = 16, className = "" }: { d: string; size?: number; className?: string }) {
     return <Icon d={d} size={size} className={className} />;
 }
 

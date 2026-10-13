@@ -1,8 +1,9 @@
+import { asset } from "@/lib/asset";
 import { Container, Eyebrow, Icon, paths } from "./ui";
 
 const list = [
   {
-    img: "/projects/apex.jpg",
+    img: asset("/projects/apex.jpg"),
     tag: "Commercial Hub",
     t: "Apex Infotech Park",
     d: "340 kWp rooftop solar plant offsetting 380 Tons of CO₂ annually with automated zero-export grid synchronization.",
@@ -10,7 +11,7 @@ const list = [
     b: "Active Yield",
   },
   {
-    img: "/projects/palm-meadows.jpg",
+    img: asset("/projects/palm-meadows.jpg"),
     tag: "Residential Estate",
     t: "Palm Meadows Residence",
     d: "12.5 kWp bifacial micro-inverter setup delivering complete power independence with 96% electricity bill reduction.",

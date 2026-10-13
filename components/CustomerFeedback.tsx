@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { Container, Eyebrow, Icon } from "./ui";
 
 const reviews = [
@@ -5,19 +6,19 @@ const reviews = [
         q: "I was very impressed by the turnkey installation service. Our household electricity expenses dropped drastically within the very first billing cycle, and the telemetry app keeps us informed daily.",
         n: "Sarah Albert",
         r: "Residential Homeowner",
-        img: "/testimonials/sarah.jpg",
+        img: asset("/testimonials/sarah.jpg"),
     },
     {
         q: "The engineering team handled our complete net metering approvals and commercial rooftop deployment without any downtime. Truly seamless execution from start to finish.",
         n: "John Doe",
         r: "Commercial Property Owner",
-        img: "/testimonials/johndoe.jpg",
+        img: asset("/testimonials/johndoe.jpg"),
     },
     {
         q: "Exceptional workmanship and tier-1 panel quality. The post-commissioning maintenance and rapid response customer support have provided complete peace of mind.",
         n: "Lilly Rowe",
         r: "Villa Owner",
-        img: "/testimonials/lilly.jpg",
+        img: asset("/testimonials/lilly.jpg"),
     },
 ];
 

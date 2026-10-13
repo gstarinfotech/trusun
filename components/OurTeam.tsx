@@ -1,20 +1,21 @@
+import { asset } from "@/lib/asset";
 import { Container } from "./ui";
 
 const team = [
     {
         n: "Robert Smith",
         r: "Director of Engineering",
-        img: "/team/robert.jpg",
+        img: asset("/team/robert.jpg"),
     },
     {
         n: "John Albert",
         r: "Solar Systems Engineer",
-        img: "/team/john.jpg",
+        img: asset("/team/john.jpg"),
     },
     {
         n: "Mike Hardson",
         r: "Master Lead Installer",
-        img: "/team/mike.jpg",
+        img: asset("/team/mike.jpg"),
     },
 ];
 

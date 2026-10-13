@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { Container, Icon } from "./ui";
 
 export default function AboutFounder() {
@@ -176,7 +177,7 @@ export default function AboutFounder() {
                             "
                         >
                             <img
-                                src="/founder.png"
+                                src={asset("/founder.png")}
                                 alt="Arjun Mehta, Founder of Trusun Enterprises"
                                 className="h-full w-full object-cover"
                             />

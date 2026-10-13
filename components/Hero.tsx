@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { Container, Icon, paths } from "./ui";
 
 const stats = [
@@ -20,7 +21,7 @@ export default function Hero() {
       className="relative overflow-hidden bg-[#0a1a2e] text-white"
     >
       <img
-        src="/home-back.jpeg"
+        src={asset("/home-back.jpeg")}
         alt=""
         aria-hidden
         className="absolute inset-0 h-full w-full object-cover"
@@ -101,7 +102,7 @@ export default function Hero() {
               "
             >
               <img
-                src="/main.jpeg"
+                src={asset("/main.jpeg")}
                 alt="Modern villa with solar panels"
                 className="aspect-[5/4] w-full object-cover"
               />

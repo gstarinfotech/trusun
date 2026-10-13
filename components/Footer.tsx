@@ -1,4 +1,5 @@
 "use client";
+import { asset } from "@/lib/asset";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -64,7 +65,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-2.5 sm:gap-3">
               <img
-                src="/logo.png"
+                src={asset("/logo.png")}
                 alt="TruSun Enterprises"
                 className="h-9 w-auto rounded bg-white p-0.5 sm:h-10"
               />
