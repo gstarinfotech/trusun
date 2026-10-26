@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Anton, Cinzel } from "next/font/google";
 import { ThemeProvider } from "next-themes";
-import "../app/globals.css";
+import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   title: "Trusun Enterprises | Smarter Solar",
   description:
     "Precision-engineered rooftop solar for homes, housing societies and businesses.",
+  icons: {
+    icon: "/icon.png?v=2",
+  },
 };
 
 export default function RootLayout({
