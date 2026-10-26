@@ -24,9 +24,6 @@ export const metadata: Metadata = {
   title: "Trusun Enterprises | Smarter Solar",
   description:
     "Precision-engineered rooftop solar for homes, housing societies and businesses.",
-  icons: {
-    icon: "/favicon.png?v=2",
-  },
 };
 
 export default function RootLayout({
