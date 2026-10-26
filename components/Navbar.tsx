@@ -47,23 +47,33 @@ export default function Navbar() {
       <div
         className={`${wrap} relative flex h-[76px] items-center gap-3 sm:gap-4 lg:h-[100px]`}
       >
+
+
         <Link
           href="/"
           onClick={closeMenus}
-          className="flex min-w-0 shrink-0 items-center gap-2 sm:gap-2.5"
+          className="flex min-w-0 shrink-0 items-center"
         >
+
           <img
-            src={asset("/logo.png")}
+            src={asset(dark ? "/logo2.png" : "/logo.png")}
             alt="Trusun Enterprises"
-            className="h-9 w-auto sm:h-11 lg:h-[58px]"
+            className="
+    h-32
+    w-auto
+    max-w-[200px]
+    object-contain
+    sm:h-[80px]
+    sm:max-w-[180px]
+    lg:h-[120px]
+    lg:max-w-[220px]
+    xl:h-[150px]
+    xl:max-w-[280px]
+  "
           />
 
-          <span className="font-logo text-[0.9rem] font-bold uppercase leading-[.95] text-navy dark:text-white sm:text-[1.1rem] lg:text-[1.6rem]">
-            Trusun
-            <br />
-            Enterprises
-          </span>
         </Link>
+
 
         <nav
           aria-label="Main"

@@ -63,18 +63,12 @@ export default function Footer() {
         <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.2fr_.8fr_.8fr_1.3fr]">
 
           <div>
-            <Link href="/" className="flex items-center gap-2.5 sm:gap-3">
+            <Link href="/" className="mb-2 flex w-fit items-center">
               <img
-                src={asset("/logo.png")}
+                src={asset("/logo2.png")}
                 alt="TruSun Enterprises"
-                className="h-9 w-auto rounded bg-white p-0.5 sm:h-10"
+                className="block h-auto w-[200px] max-w-none object-contain sm:w-[180px] lg:w-[220px] xl:w-[280px]"
               />
-
-              <span className="text-lg sm:text-xl">
-                <b className="font-semibold">TruSun</b>{" "}
-                <span className="font-light text-white/80">Enterprises</span>{" "}
-                <i className="text-[#FF6B18]">•</i>
-              </span>
             </Link>
 
             <p className="mt-4 max-w-sm text-[13px] leading-relaxed text-white/60 sm:mt-5 sm:text-[14px]">
