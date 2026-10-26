@@ -33,15 +33,32 @@
   --color-blue: var(--blue);
   --color-navy: #0a2540;
   --color-accent: #ff6a13;
-  --font-sans: var(--f-body), system-ui, sans-serif; 
-  --font-head: var(--f-head), Impact, sans-serif;
-  --font-serif:
-    var(--f-alt), system-ui, sans-serif;
-  --font-nav: var(--f-alt), system-ui, sans-serif; 
-  --font-logo:
-    var(--f-alt), system-ui, sans-serif;
-  --font-alt: var(--f-alt), system-ui, sans-serif;
+  --font-sans: var(--f-body), sans-serif;
+  --font-nav: var(--f-body), sans-serif;
+  --font-serif: var(--f-cinzel), serif;
+  --font-alt: var(--f-cinzel), serif;
+  --font-logo: var(--f-cinzel), serif;
+  --font-head: var(--f-head), sans-serif;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--f-cinzel), serif;
+}
+
+h1.font-head {
+  font-family: var(--f-head), sans-serif;
+}
+
+body {
+  font-family: var(--f-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 110px;

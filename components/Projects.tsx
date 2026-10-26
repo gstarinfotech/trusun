@@ -30,7 +30,7 @@ export default function Projects() {
             <div>
               <Eyebrow>Track Record</Eyebrow>
 
-              <h2 className="mt-1.5 font-serif text-[24px] font-semibold leading-[1.15] text-ink sm:mt-2 sm:text-[clamp(1.9rem,3.8vw,3.1rem)]">
+              <h2 className="mt-1.5 font-serif text-[20px] font-semibold leading-[1.15] text-ink sm:mt-2 sm:text-[clamp(1.9rem,3.8vw,3.1rem)]">
                 Featured Installations
               </h2>
             </div>

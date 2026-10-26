@@ -41,7 +41,7 @@ export default function Solutions() {
         <div className="mx-auto w-full max-w-[1216px]">
           <Eyebrow>Targeted Solutions</Eyebrow>
 
-          <h2 className="mt-2 font-nav text-[27px] font-semibold leading-[1.15] text-ink sm:text-[34px] lg:text-[42px]">
+          <h2 className="mt-2 font-nav text-[24px] font-semibold leading-[1.15] text-ink sm:text-[34px] lg:text-[42px]">
             Powering Every Space With{" "}
             <span className="text-[#FF6B18]">Smarter Solar</span>
           </h2>

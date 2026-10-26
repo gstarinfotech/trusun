@@ -29,7 +29,7 @@ export default function Why() {
               <Eyebrow>The Engineering Distinction</Eyebrow>
             </div>
 
-            <h2 className="mt-2 font-nav text-[27px] font-semibold leading-[1.15] text-ink sm:text-[34px] lg:text-[3.1rem]">
+            <h2 className="mt-2 font-nav text-[24px] font-semibold leading-[1.15] text-ink sm:text-[34px] lg:text-[3.1rem]">
               Why People Trust Us
             </h2>
           </div>

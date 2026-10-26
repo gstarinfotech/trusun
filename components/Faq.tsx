@@ -39,7 +39,7 @@ export default function Faq() {
         <div className="text-center">
           <Eyebrow>Clarity &amp; Confidence</Eyebrow>
 
-          <h2 className="mt-1.5 font-serif text-[22px] font-semibold leading-tight text-ink sm:mt-2 sm:text-[clamp(1.9rem,3.8vw,3.1rem)]">
+          <h2 className="mt-1.5 font-serif text-[20px] font-semibold leading-tight text-ink sm:mt-2 sm:text-[clamp(1.9rem,3.8vw,3.1rem)]">
             Frequently Asked Questions
           </h2>
 

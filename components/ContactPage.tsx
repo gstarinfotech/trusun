@@ -69,7 +69,7 @@ export default function Contact() {
             </p>
 
             <div className="relative mt-1.5 lg:min-h-[128px]">
-              <h1 className="max-w-[866px] font-nav text-[27px] font-bold leading-[1.08] tracking-[-0.035em] text-[#10233E] dark:text-ink sm:text-[57px]">
+              <h1 className="max-w-[866px] font-serif text-[27px] font-bold leading-[1.08] tracking-[-0.035em] text-[#10233E] dark:text-ink sm:text-[57px]">
                 Let’s Power Your{" "}
                 <span className="text-[#FF6B18]">
                   Sustainable Future
@@ -104,11 +104,10 @@ export default function Contact() {
               ].map((item, i) => (
                 <div
                   key={item.label}
-                  className={`flex min-w-0 items-center gap-2 px-1.5 py-1.5 sm:justify-center sm:px-2 sm:py-0 ${
-                    i
+                  className={`flex min-w-0 items-center gap-2 px-1.5 py-1.5 sm:justify-center sm:px-2 sm:py-0 ${i
                       ? "border-t border-[#DCE5EF] dark:border-line sm:border-l sm:border-t-0"
                       : ""
-                  }`}
+                    }`}
                 >
                   <LineIcon
                     d={item.icon}
@@ -151,7 +150,7 @@ export default function Contact() {
                   </span>
                 </div>
 
-                <h2 className="mt-2 font-nav text-[21px] font-bold leading-[1.25] tracking-[-0.03em] text-[#121C26] dark:text-ink sm:text-[36px]">
+                <h2 className="mt-2 font-serif text-[21px] font-bold leading-[1.25] tracking-[-0.03em] text-[#121C26] dark:text-ink sm:text-[36px]">
                   Schedule a Site Feasibility Study &amp; Consultation
                 </h2>
 
@@ -222,11 +221,10 @@ export default function Contact() {
                           type="button"
                           aria-pressed={profile === item.label}
                           onClick={() => setProfile(item.label)}
-                          className={`flex h-[68px] w-full min-w-0 items-center gap-2 rounded-[10px] px-2.5 text-left text-[11px] font-semibold transition sm:text-[14px] ${
-                            profile === item.label
+                          className={`flex h-[68px] w-full min-w-0 items-center gap-2 rounded-[10px] px-2.5 text-left text-[11px] font-semibold transition sm:text-[14px] ${profile === item.label
                               ? "bg-[#102743] text-white dark:bg-[#245184] dark:text-white"
                               : "bg-[#EDF4FF] text-[#17212C] hover:bg-[#E2EDFC] dark:bg-[#172842] dark:text-[#E1EAF7] dark:hover:bg-[#203652]"
-                          }`}
+                            }`}
                         >
                           <LineIcon d={item.icon} size={15} />
 
@@ -402,7 +400,7 @@ export default function Contact() {
 
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-center justify-between gap-2">
-                      <h3 className="font-nav text-[15px] font-semibold leading-tight text-[#121C26] dark:text-ink sm:text-[20px]">
+                      <h3 className="font-serif text-[15px] font-semibold leading-tight text-[#121C26] dark:text-ink sm:text-[20px]">
                         Corporate Headquarters
                       </h3>
 
@@ -440,7 +438,7 @@ export default function Contact() {
               {/* REGIONAL SERVICE CLUSTERS */}
               <div className={`${cardClass} p-3 sm:p-6`}>
                 <div className="flex flex-wrap items-center justify-between gap-3">
-                  <h3 className="flex items-center gap-2 font-nav text-[15px] font-semibold text-[#121C26] dark:text-ink sm:text-[20px]">
+                  <h3 className="flex items-center gap-2 font-serif text-[15px] font-semibold text-[#121C26] dark:text-ink sm:text-[20px]">
                     <LineIcon
                       d="M12 2v4m0 12v4M2 12h4m12 0h4M5 5l3 3m8 8 3 3M19 5l-3 3m-8 8-3 3M12 9a3 3 0 100 6 3 3 0 000-6z"
                       size={17}

@@ -76,7 +76,7 @@ export default function Testimonials() {
                 Real Homeowner Impact
               </span>
 
-              <h2 className="mt-3 max-w-[780px] font-serif text-[22px] font-semibold leading-[1.2] text-ink sm:mt-2.5 sm:text-[34px]">
+              <h2 className="mt-3 max-w-[780px] font-serif text-[18px] font-semibold leading-[1.2] text-ink sm:mt-2.5 sm:text-[30px]">
                 Trusted by 15,000+ rooftops.{" "}
                 <span className="text-blue">90% referral rate.</span>
               </h2>

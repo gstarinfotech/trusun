@@ -1,6 +1,6 @@
 "use client";
-import { asset } from "@/lib/asset";
 
+import { asset } from "@/lib/asset";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
@@ -47,33 +47,28 @@ export default function Navbar() {
       <div
         className={`${wrap} relative flex h-[76px] items-center gap-3 sm:gap-4 lg:h-[100px]`}
       >
-
-
         <Link
           href="/"
           onClick={closeMenus}
           className="flex min-w-0 shrink-0 items-center"
         >
-
           <img
             src={asset(dark ? "/logo2.png" : "/logo.png")}
             alt="Trusun Enterprises"
             className="
-    h-32
-    w-auto
-    max-w-[200px]
-    object-contain
-    sm:h-[80px]
-    sm:max-w-[180px]
-    lg:h-[120px]
-    lg:max-w-[220px]
-    xl:h-[150px]
-    xl:max-w-[280px]
-  "
+              h-32
+              w-auto
+              max-w-[200px]
+              object-contain
+              sm:h-[80px]
+              sm:max-w-[180px]
+              lg:h-[120px]
+              lg:max-w-[220px]
+              xl:h-[150px]
+              xl:max-w-[280px]
+            "
           />
-
         </Link>
-
 
         <nav
           aria-label="Main"
@@ -83,7 +78,7 @@ export default function Navbar() {
           <Link
             href="/"
             onClick={closeMenus}
-            className="inline-flex items-center gap-1 rounded-lg px-2 py-2.5 font-nav text-[16px] font-semibold text-ink transition hover:text-[#FF6B18] sm:text-[17px] lg:px-0 lg:py-0 lg:text-[18px]"
+            className="inline-flex items-center gap-1 rounded-lg px-2 py-2.5 font-serif text-[16px] font-semibold text-ink transition hover:text-[#FF6B18] sm:text-[17px] lg:px-0 lg:py-0 lg:text-[18px]"
           >
             Home
           </Link>
@@ -91,7 +86,7 @@ export default function Navbar() {
           <Link
             href="/about"
             onClick={closeMenus}
-            className="inline-flex items-center gap-1 rounded-lg px-2 py-2.5 font-nav text-[16px] font-semibold text-ink transition hover:text-[#FF6B18] sm:text-[17px] lg:px-0 lg:py-0 lg:text-[18px]"
+            className="inline-flex items-center gap-1 rounded-lg px-2 py-2.5 font-serif text-[16px] font-semibold text-ink transition hover:text-[#FF6B18] sm:text-[17px] lg:px-0 lg:py-0 lg:text-[18px]"
           >
             About Us
           </Link>
@@ -101,7 +96,7 @@ export default function Navbar() {
               type="button"
               onClick={() => setSolutionsOpen((prev) => !prev)}
               aria-expanded={solutionsOpen}
-              className="inline-flex w-full items-center justify-between gap-1 rounded-lg px-2 py-2.5 font-nav text-[16px] font-semibold text-ink transition hover:text-[#FF6B18] sm:text-[17px] lg:w-auto lg:justify-start lg:px-0 lg:py-0 lg:text-[18px]"
+              className="inline-flex w-full items-center justify-between gap-1 rounded-lg px-2 py-2.5 font-serif text-[16px] font-semibold text-ink transition hover:text-[#FF6B18] sm:text-[17px] lg:w-auto lg:justify-start lg:px-0 lg:py-0 lg:text-[18px]"
             >
               <span>Solutions</span>
 
@@ -123,7 +118,6 @@ export default function Navbar() {
                   p-2
                   shadow-[0_8px_25px_rgba(0,0,0,0.18)]
                   dark:bg-[#10253b]
-
                   lg:absolute
                   lg:left-1/2
                   lg:top-[calc(100%+18px)]
@@ -148,7 +142,7 @@ export default function Navbar() {
                       bg-[#e9ecef]
                       px-3
                       py-3
-                      font-nav
+                      font-serif
                       text-[16px]
                       font-semibold
                       text-[#062d49]
@@ -177,7 +171,7 @@ export default function Navbar() {
           <Link
             href="/projects"
             onClick={closeMenus}
-            className="inline-flex items-center gap-1 rounded-lg px-2 py-2.5 font-nav text-[16px] font-semibold text-ink transition hover:text-[#FF6B18] sm:text-[17px] lg:px-0 lg:py-0 lg:text-[18px]"
+            className="inline-flex items-center gap-1 rounded-lg px-2 py-2.5 font-serif text-[16px] font-semibold text-ink transition hover:text-[#FF6B18] sm:text-[17px] lg:px-0 lg:py-0 lg:text-[18px]"
           >
             Projects
           </Link>
@@ -185,7 +179,7 @@ export default function Navbar() {
           <Link
             href="/solar-guide"
             onClick={closeMenus}
-            className="inline-flex items-center gap-1 rounded-lg px-2 py-2.5 font-nav text-[16px] font-semibold text-ink transition hover:text-[#FF6B18] sm:text-[17px] lg:px-0 lg:py-0 lg:text-[18px]"
+            className="inline-flex items-center gap-1 rounded-lg px-2 py-2.5 font-serif text-[16px] font-semibold text-ink transition hover:text-[#FF6B18] sm:text-[17px] lg:px-0 lg:py-0 lg:text-[18px]"
           >
             Solar guide
           </Link>
@@ -193,7 +187,7 @@ export default function Navbar() {
           <Link
             href="/contact-us"
             onClick={closeMenus}
-            className="mt-2 rounded-full bg-navy px-6 py-3 text-center font-nav text-[15px] font-semibold text-white lg:hidden"
+            className="mt-2 rounded-full bg-navy px-6 py-3 text-center font-serif text-[15px] font-semibold text-white lg:hidden"
           >
             Get Free Quote
           </Link>
@@ -202,7 +196,7 @@ export default function Navbar() {
         <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-3 lg:gap-4">
           <Link
             href="/contact-us"
-            className="hidden rounded-full bg-navy px-6 py-3 font-nav text-[15px] font-semibold text-white transition hover:brightness-125 lg:inline-block xl:px-8 xl:py-3.5 xl:text-[17px] dark:bg-[#1d5c85]"
+            className="hidden rounded-full bg-navy px-6 py-3 font-serif text-[15px] font-semibold text-white transition hover:brightness-125 lg:inline-block xl:px-8 xl:py-3.5 xl:text-[17px] dark:bg-[#1d5c85]"
           >
             Get Free Quote
           </Link>
