@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   description:
     "Precision-engineered rooftop solar for homes, housing societies and businesses.",
   icons: {
-    icon: "/icon.png?v=2",
+    icon: "/favicon.png?v=2",
   },
 };
 
