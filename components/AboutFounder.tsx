@@ -1,3 +1,4 @@
+
 import { asset } from "@/lib/asset";
 import { Container, Icon } from "./ui";
 
@@ -21,11 +22,12 @@ export default function AboutFounder() {
                         mx-auto grid w-full max-w-[1216px]
                         items-center gap-5
                         sm:gap-8
-                        lg:grid-cols-[1.05fr_0.95fr]
-                        lg:gap-[50px]
+                        lg:grid-cols-[1.3fr_0.7fr]
+                        lg:gap-[35px]
                     "
                 >
-                    <div>
+                    {/* Founder Content */}
+                    <div className="w-full">
                         <span
                             className="
                                 inline-block rounded-full
@@ -52,45 +54,45 @@ export default function AboutFounder() {
                             "
                         >
                             <span className="block">
-                                Engineering Trust,
+                                Man behind the vision -
                             </span>
 
-                            <span className="block">
-                                One{" "}
-                                <span className="text-[#FF6B18]">
-                                    Rooftop
-                                </span>{" "}
-                                at a Time.
+                            <span className="block text-[#FF6B18]">
+                                Ashok Kumar
                             </span>
                         </h2>
 
-                        <p
+                        <div
                             className="
-                                mt-3 max-w-[540px]
+                                mt-3 max-w-[680px]
                                 text-[12px] font-normal
                                 leading-[1.55]
                                 text-white/75
                                 sm:mt-4
                                 sm:text-[14px]
                                 sm:leading-[1.65]
-                                lg:text-[18px]
+                                lg:text-[17px]
+                                lg:leading-[1.65]
                             "
                         >
-                            Founded by{" "}
-                            <b className="text-white">
-                                Arjun Mehta
-                            </b>
-                            , a solar engineer with over 15 years in
-                            grid-scale and rooftop photovoltaic systems,
-                            TruSun Enterprises was built on a simple
-                            belief: clean energy should be bankable, not
-                            just green. From his first 5kW residential
-                            install to a 120+ MWp telemetry fleet today,
-                            his focus has stayed the same — engineering
-                            precision over quick sales, and long-term
-                            performance over short-term promises.
-                        </p>
+                            <p>
+                                Mr. Ashok Kumar is a visionary leader with 30+ years of experience in renewable energy and sustainable infrastructure. Holding a B.Tech in Electrical Engineering from NIT Warangal and an MBA in Information Technology from JMI, New Delhi, he began his career as an Assistant Commandant in the Indian Coast Guard, developing expertise in operational management and leadership of large scale initiatives.
+                            </p>
 
+                            <p className="mt-3">
+                                As Chief Engineer at Prasar Bharati under the Ministry of Information and Broadcasting, Mr Kumar oversaw civil, electrical, and mechanical services across India's premier public broadcaster. He spearheaded energy efficiency initiatives and sustainable architecture optimization across broadcasting studios and transmission networks.
+                            </p>
+
+                            <p className="mt-3">
+                                His technical expertise has been sought by leading institutions including Corporation Bank, Punjab National Bank, NIT Surat, and FTII (Film and Television Institute of India), where he pioneered India's first patented movable projection screen technology. Throughout his career, he has consistently integrated cutting edge technology with sustainable practices.
+                            </p>
+
+                            <p className="mt-3">
+                                Mr Kumar's diverse experience from maritime operations to institutional infrastructure management culminated in establishing a dedicated platform for renewable solar and sustainable energy solutions. As Founder and Chief Visionary Officer, he now drives India's renewable energy transition, addressing the nation's critical need for scalable, efficient, and environmentally responsible energy infrastructure across institutions and industries.
+                            </p>
+                        </div>
+
+                        {/* Founder Designation */}
                         <div
                             className="
                                 mt-4 flex items-center gap-3
@@ -116,16 +118,17 @@ export default function AboutFounder() {
 
                             <div className="leading-tight">
                                 <p className="text-[15px] font-bold text-white sm:text-[17px]">
-                                    Arjun Mehta
+                                    Ashok Kumar
                                 </p>
 
                                 <p className="mt-0.5 text-[11px] text-white/60 sm:mt-1 sm:text-[14px]">
-                                    Founder &amp; Chief Solar Engineer
+                                    Founder &amp; Chief Visionary Officer
                                 </p>
                             </div>
                         </div>
                     </div>
 
+                    {/* Founder Image - Unchanged */}
                     <div
                         className="
                             relative ml-auto
@@ -177,8 +180,8 @@ export default function AboutFounder() {
                             "
                         >
                             <img
-                                src={asset("/founder.png")}
-                                alt="Arjun Mehta, Founder of Trusun Enterprises"
+                                src={asset("/founder.jpeg")}
+                                alt="Mr. Ashok Kumar, Founder of TruSun Enterprises"
                                 className="h-full w-full object-cover"
                             />
                         </div>

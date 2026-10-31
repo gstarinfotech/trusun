@@ -259,7 +259,7 @@ export default function CustomerFeedback() {
 
                     <div className="flex w-full shrink-0 flex-row gap-2 sm:w-auto sm:gap-3">
                         <a
-                            href="#contact"
+                            href="/contact-us"
                             className="
                 inline-flex
                 min-w-0

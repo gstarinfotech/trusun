@@ -1,3 +1,4 @@
+
 import { Container, Icon, paths } from "./ui";
 
 export default function Cta() {
@@ -26,21 +27,13 @@ export default function Cta() {
             zero cost or commitment.
           </p>
 
-          <div className="mt-5 flex w-full flex-col justify-center gap-2.5 sm:mt-8 sm:w-auto sm:flex-row sm:flex-wrap sm:gap-3">
+          <div className="mt-5 flex w-full justify-center sm:mt-8">
             <a
-              href="mailto:pro@trusunenergy.com"
+              href="mailto:trusunenterprises@gmail.com"
               className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-4 py-3 text-[12px] font-semibold text-white transition hover:brightness-110 sm:w-auto sm:gap-6 sm:px-6 sm:text-[14px]"
             >
               Schedule Site Feasibility visit
               <Icon d={paths.cal} size={15} />
-            </a>
-
-            <a
-              href="tel:18008787866"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-4 py-3 text-[12px] font-semibold text-[#0b3a63] sm:w-auto sm:px-6 sm:text-[14px]"
-            >
-              <Icon d={paths.phone} size={15} />
-              Talk to Solar Engineer
             </a>
           </div>
 

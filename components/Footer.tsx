@@ -1,14 +1,17 @@
-"use client";
-import { asset } from "@/lib/asset";
 
+"use client";
+
+import { asset } from "@/lib/asset";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa6";
+
 import { Container, Icon, paths } from "./ui";
 
 const sol: { name: string; badge: string; href: string }[] = [
@@ -39,11 +42,15 @@ const social = [
 export default function Footer() {
   const pathname = usePathname();
   const [hash, setHash] = useState("");
+
   useEffect(() => {
     const sync = () => setHash(window.location.hash);
+
     sync();
+
     window.addEventListener("hashchange", sync);
     window.addEventListener("popstate", sync);
+
     return () => {
       window.removeEventListener("hashchange", sync);
       window.removeEventListener("popstate", sync);
@@ -53,7 +60,9 @@ export default function Footer() {
   const isActive = (href: string) => {
     const [base, h] = href.split("#");
     const clean = (s: string) => s.replace(/\/$/, "") || "/";
+
     if (clean(base) !== clean(pathname)) return false;
+
     return (h ? "#" + h : "") === hash;
   };
 
@@ -62,6 +71,7 @@ export default function Footer() {
       <Container className="pt-10 sm:pt-14 lg:pt-20">
         <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.2fr_.8fr_.8fr_1.3fr]">
 
+          {/* Company Information */}
           <div>
             <Link href="/" className="mb-2 flex w-fit items-center">
               <img
@@ -74,7 +84,7 @@ export default function Footer() {
             <p className="mt-4 max-w-sm text-[13px] leading-relaxed text-white/60 sm:mt-5 sm:text-[14px]">
               Engineering institutional-grade solar generation infrastructure,
               AI string telemetry, and balance-sheet grade clean energy assets
-              engineered for 25+ years.
+              engineered for 30+ years.
             </p>
 
             <span className="mt-4 inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-2.5 py-1.5 text-[11px] sm:mt-5 sm:px-3 sm:py-2 sm:text-[13px]">
@@ -103,6 +113,7 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Solutions */}
           <div>
             <h4 className="text-[12px] font-bold uppercase tracking-[.12em] sm:text-[13px]">
               Solutions
@@ -111,6 +122,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2.5 text-[13px] text-white/70 sm:mt-5 sm:space-y-3.5 sm:text-[15px]">
               {sol.map(({ name, badge, href }) => {
                 const active = pathname === href;
+
                 return (
                   <li
                     key={name}
@@ -136,6 +148,7 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Company Links */}
           <div>
             <h4 className="text-[12px] font-bold uppercase tracking-[.12em] sm:text-[13px]">
               Company
@@ -144,6 +157,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2.5 text-[13px] text-white/70 sm:mt-5 sm:space-y-3.5 sm:text-[15px]">
               {co.map(({ name, href }) => {
                 const active = isActive(href);
+
                 return (
                   <li key={name}>
                     <Link
@@ -166,10 +180,13 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Project Briefing & Contact */}
           <div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-6">
               <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] sm:text-[13px]">
-                <b className="uppercase tracking-[.1em]">Project Briefing</b>
+                <b className="uppercase tracking-[.1em]">
+                  Project Briefing
+                </b>
 
                 <span className="text-[10px] font-semibold text-[#FF6B18] sm:text-[12px]">
                   • Quarterly Tech
@@ -202,9 +219,12 @@ export default function Footer() {
               </form>
             </div>
 
+            {/* Updated Contact Details */}
             <div className="mt-4 grid gap-2.5 sm:mt-5 sm:grid-cols-2 sm:gap-3">
+
+              {/* Phone Number */}
               <a
-                href="tel:18008787866"
+                href="tel:+918800258007"
                 className="flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/5 p-3 sm:gap-3 sm:p-4"
               >
                 <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-accent/20 text-[#FF6B18] sm:h-9 sm:w-9">
@@ -213,15 +233,18 @@ export default function Footer() {
 
                 <span className="leading-tight">
                   <small className="block text-[9px] font-semibold uppercase tracking-wide text-white/60 sm:text-[10px]">
-                    Hotline 24/7
+                    Contact Us
                   </small>
 
-                  <b className="text-[12px] sm:text-[14px]">1800-TRUSUN</b>
+                  <b className="text-[12px] sm:text-[14px]">
+                    +91 8800 258007
+                  </b>
                 </span>
               </a>
 
+              {/* Email Address */}
               <a
-                href="mailto:pro@trusun.com"
+                href="mailto:trusunenterprises@gmail.com"
                 className="flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/5 p-3 sm:gap-3 sm:p-4"
               >
                 <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-sky-400/20 text-sky-300 sm:h-9 sm:w-9">
@@ -230,18 +253,20 @@ export default function Footer() {
 
                 <span className="min-w-0 leading-tight">
                   <small className="block text-[9px] font-semibold uppercase tracking-wide text-white/60 sm:text-[10px]">
-                    Institutional Desk
+                    Email Us
                   </small>
 
                   <b className="break-all text-[11px] sm:text-[14px]">
-                    pro@trusun.com
+                    trusunenterprises@gmail.com
                   </b>
                 </span>
               </a>
+
             </div>
           </div>
         </div>
 
+        {/* Copyright & Legal Links */}
         <div className="mt-8 flex flex-col gap-4 border-t border-white/10 py-5 text-[11px] text-white/60 sm:mt-12 sm:gap-4 sm:py-6 sm:text-[13px] lg:flex-row lg:items-center lg:justify-between">
 
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
