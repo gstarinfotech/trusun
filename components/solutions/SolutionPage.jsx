@@ -935,7 +935,7 @@ function CTA({ data }) {
 
                 <div className="grid w-full shrink-0 grid-cols-1 gap-2 sm:flex sm:w-auto sm:gap-3">
                     <a
-                        href="/contact-us"
+                        href="/trusun/contact-us"
                         className="
             inline-flex
             min-h-[42px]
