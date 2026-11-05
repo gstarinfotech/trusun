@@ -280,7 +280,7 @@ export default function Contact() {
                                                 <input
                                                     name="city"
                                                     required
-                                                    placeholder="e.g. Pune, 411001"
+                                                    placeholder="e.g. Delhi, 110092"
                                                     className="w-full min-w-0 bg-transparent text-[12px] text-inherit outline-none placeholder:text-[#7B8491] dark:placeholder:text-[#8E9CB3] sm:text-[15px]"
                                                 />
                                             </div>
@@ -419,8 +419,7 @@ export default function Contact() {
                                 </div>
 
                                 <p className="mt-4 text-[12px] leading-[1.65] text-[#414751] dark:text-mute sm:text-[15px]">
-                                    TruSun Energy Tower, TechPark 4, Bandra Kurla Complex (BKC),
-                                    Mumbai, MH 400051, India.
+                                    Madhu Vihar, I.P.Extension, Patparganj, New Delhi, Delhi, 110092
                                 </p>
 
                                 <div className="mt-3 flex flex-wrap items-center justify-between gap-2 rounded-[8px] bg-[#EDF4FF] px-3 py-3 text-[11px] font-semibold text-[#414751] dark:bg-[#172842] dark:text-[#D5DFEF] sm:text-[13px]">

@@ -168,20 +168,20 @@ export default function Navbar() {
             )}
           </div>
 
-          <Link
+          {/* <Link
             href="/projects"
             onClick={closeMenus}
             className="inline-flex items-center gap-1 rounded-lg px-2 py-2.5 font-serif text-[16px] font-semibold text-ink transition hover:text-[#FF6B18] sm:text-[17px] lg:px-0 lg:py-0 lg:text-[18px]"
           >
             Projects
-          </Link>
+          </Link> */}
 
           <Link
-            href="/solar-guide"
+            href="/contact-us"
             onClick={closeMenus}
             className="inline-flex items-center gap-1 rounded-lg px-2 py-2.5 font-serif text-[16px] font-semibold text-ink transition hover:text-[#FF6B18] sm:text-[17px] lg:px-0 lg:py-0 lg:text-[18px]"
           >
-            Solar guide
+            Contact Us
           </Link>
 
           <Link
